@@ -1,0 +1,20 @@
+{
+  "name": "aduana_py_template",
+  "version": "1.0.0",
+  "description": "https://necolas.github.io/normalize.css/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"sass --watch ./scss/main.scss ./dist/css/styles.css\" \"live-server dist/page\" "
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "gh-pages": "^5.0.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.57.1"
+  }
+}
