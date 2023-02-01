@@ -1,3 +1,7 @@
-h1{
-    font: 1rem;
-}
+@use 'vars/vars' as v;
+@import 'reset';
+@import 'styles/styles';
+
+
+
+
