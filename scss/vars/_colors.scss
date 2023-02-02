@@ -43,8 +43,8 @@ $success-dark: $green-dark;
 
 $warning: $orange;
 
-$fail: $red;
-$fail-dark: $red-dark;
+$error: $red;
+$error-dark: $red-dark;
 
 $muted: $gray-400;
 
@@ -60,8 +60,8 @@ $theme-colors: (
     "success": $success ,
     "success-dark": $success-dark ,
     "warning": $warning ,
-    "fail": $fail ,
-    "fail-dark": $fail-dark ,
+    "error": $error ,
+    "error-dark": $error-dark ,
     "muted": $muted ,
 
 );

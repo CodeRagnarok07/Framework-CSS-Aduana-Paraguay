@@ -12,6 +12,8 @@
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
+
+
   
   /* Sections
      ========================================================================== */
@@ -856,4 +858,9 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+
+html,body, #sidebar{
+  height: 100vh;
 }

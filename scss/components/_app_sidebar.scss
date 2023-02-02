@@ -1,0 +1,37 @@
+.appbar {
+    height: 100%;
+
+    display: flex;
+
+    ul {
+        @extend .bg-primary;
+
+        width: max-content;
+        height: 100%;
+
+        li {
+            padding: 1rem 1.5rem;
+            display: flex;
+            gap: 20px;
+            &:hover,
+            .selected {
+                @extend .bg-secondary;
+                @extend .text-primary;
+                cursor: pointer;
+                box-shadow: 4px 0px 0px 0px rgba(57, 73, 171, 1) inset;
+
+            }
+            &.appbar-title {
+                border-bottom: 1px v.$primary-dark solid;
+                border-top: 1px v.$primary-dark solid;
+                color: v.$primary-light;
+            }
+
+            &.appbar-item {
+           
+      
+
+                }
+        }
+    }
+}

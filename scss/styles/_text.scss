@@ -1,9 +1,37 @@
 /*************** FONTS SIZE ***************/
-$sm: 12px;
-$md: 14px;
 
 
 $h1: 56px;
 $h2: 42px;
 $h3: 26px;
 $h4: 18px;
+
+$md: 14px;
+$sm: 12px;
+
+
+$font-list: (
+    "h1": $h1 ,
+    "h2": $h2 ,
+    "h3": $h3 ,
+    "h4": $h4 ,
+
+    "p": $md ,
+    "strong": $md ,
+    "blockquote": $md ,
+    "small": $sm ,
+
+);
+
+@each $name,
+$value in $font-list {
+
+    #{$name},
+    .#{$name} {
+        font-size: $value; 
+    }
+}
+
+body{
+    @extend .p;
+}

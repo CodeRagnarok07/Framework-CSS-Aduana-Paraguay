@@ -782,8 +782,54 @@ video {
   --tw-backdrop-sepia: ;
 }
 
-/*************** FONTS SIZE ***************/ /*************** THEME COLORS ***************/
-.bg-primary {
+html, body, #sidebar {
+  height: 100vh;
+}
+
+/*************** FONTS SIZE ***************/
+h1,
+.h1 {
+  font-size: 56px;
+}
+
+h2,
+.h2 {
+  font-size: 42px;
+}
+
+h3,
+.h3 {
+  font-size: 26px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+p,
+.p,
+body {
+  font-size: 14px;
+}
+
+strong,
+.strong {
+  font-size: 14px;
+}
+
+blockquote,
+.blockquote {
+  font-size: 14px;
+}
+
+small,
+.small {
+  font-size: 12px;
+}
+
+/*************** THEME COLORS ***************/
+.bg-primary, .appbar ul, .btn-primary div {
   color: white;
   background-color: #054A89;
 }
@@ -798,7 +844,8 @@ video {
   background-color: #3B9AF0;
 }
 
-.bg-secondary {
+.bg-secondary, .appbar ul li:hover,
+.appbar ul li .selected, .btn-secondary div {
   color: black;
   background-color: #E5EEEF;
 }
@@ -808,7 +855,7 @@ video {
   background-color: #C8E7EB;
 }
 
-.bg-success {
+.bg-success, .btn-success div {
   color: white;
   background-color: #1D7D74;
 }
@@ -823,12 +870,12 @@ video {
   background-color: #EE8030;
 }
 
-.bg-fail {
+.bg-error, .btn-error div {
   color: white;
   background-color: #FF0000;
 }
 
-.bg-fail-dark {
+.bg-error-dark {
   color: white;
   background-color: #C10000;
 }
@@ -838,7 +885,8 @@ video {
   background-color: #E9E9E9;
 }
 
-.text-primary {
+.text-primary, .appbar ul li:hover,
+.appbar ul li .selected {
   color: #054A89;
 }
 
@@ -870,16 +918,188 @@ video {
   color: #EE8030;
 }
 
-.text-fail {
+.text-error {
   color: #FF0000;
 }
 
-.text-fail-dark {
+.text-error-dark {
   color: #C10000;
 }
 
 .text-muted {
   color: #E9E9E9;
+}
+
+/*************** SIZE LIST ***************/
+.p-xxs {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding: 0.125rem;
+}
+
+.p-xs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding: 0.25rem;
+}
+
+.p-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.p-md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding: 1rem;
+}
+
+.p-lg {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.p-xl {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding: 2rem;
+}
+
+.p-2xl {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding: 3rem;
+}
+
+/*************** BTN STYLE ***************/
+.btn-xs {
+  padding: 4px 8px;
+  border-radius: 0.25rem;
+  border: solid 1px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  border-radius: 0.25rem;
+  border: solid 1px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-md {
+  padding: 12px 24px;
+  border-radius: 0.25rem;
+  border: solid 1px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  border-radius: 0.25rem;
+  border: solid 1px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #054A89;
+  border-color: #054A89;
+}
+.btn-primary svg path {
+  fill: #054A89;
+}
+.btn-primary.btn-outline {
+  background-color: transparent;
+  color: #054A89;
+}
+.btn-primary.btn-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: #054A89;
+}
+
+.btn-secondary {
+  color: black;
+  background-color: #E5EEEF;
+  border-color: #E5EEEF;
+}
+.btn-secondary svg path {
+  fill: #E5EEEF;
+}
+.btn-secondary.btn-outline {
+  background-color: transparent;
+  color: #E5EEEF;
+}
+.btn-secondary.btn-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: #E5EEEF;
+}
+
+.btn-success {
+  color: white;
+  background-color: #1D7D74;
+  border-color: #1D7D74;
+}
+.btn-success svg path {
+  fill: #1D7D74;
+}
+.btn-success.btn-outline {
+  background-color: transparent;
+  color: #1D7D74;
+}
+.btn-success.btn-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: #1D7D74;
+}
+
+.btn-error {
+  color: white;
+  background-color: #FF0000;
+  border-color: #FF0000;
+}
+.btn-error svg path {
+  fill: #FF0000;
+}
+.btn-error.btn-outline {
+  background-color: transparent;
+  color: #FF0000;
+}
+.btn-error.btn-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: #FF0000;
+}
+
+.appbar {
+  height: 100%;
+  display: flex;
+}
+.appbar ul {
+  width: max-content;
+  height: 100%;
+}
+.appbar ul li {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 20px;
+}
+.appbar ul li:hover,
+.appbar ul li .selected {
+  cursor: pointer;
+  box-shadow: 4px 0px 0px 0px rgb(57, 73, 171) inset;
+}
+.appbar ul li.appbar-title {
+  border-bottom: 1px #427DA6 solid;
+  border-top: 1px #427DA6 solid;
+  color: #3B9AF0;
 }
 
 /*# sourceMappingURL=styles.css.map */

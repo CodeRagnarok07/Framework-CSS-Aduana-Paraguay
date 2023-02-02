@@ -1,4 +1,10 @@
-@mixin responsive ($size) {
+/*************** BREACKPOINTS ***************/
+$sm: 360px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1360px;
+
+@mixin resp ($size) {
     @media (min-width: $size) {
          @content; 
     }
