@@ -930,49 +930,6 @@ small,
   color: #E9E9E9;
 }
 
-/*************** SIZE LIST ***************/
-.p-xxs {
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-  padding: 0.125rem;
-}
-
-.p-xs {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding: 0.25rem;
-}
-
-.p-sm {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding: 0.5rem;
-}
-
-.p-md {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding: 1rem;
-}
-
-.p-lg {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding: 1.5rem;
-}
-
-.p-xl {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding: 2rem;
-}
-
-.p-2xl {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding: 3rem;
-}
-
 /*************** BTN STYLE ***************/
 .btn-xs {
   padding: 4px 8px;
@@ -1076,6 +1033,111 @@ small,
   background-color: transparent;
   border-color: transparent;
   color: #FF0000;
+}
+
+.rounded-sm, .box-dashed {
+  border-radius: 0.25rem;
+}
+
+.rounded-md {
+  border-radius: 0.5rem;
+}
+
+.rounded-lg {
+  border-radius: 100%;
+}
+
+.box-dashed {
+  border: 4px dashed #7B61FF;
+  padding: 20px 32px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-check {
+  /* ...existing styles */
+  display: grid;
+  position: relative;
+  place-content: center;
+  visibility: hidden;
+  width: 1rem;
+  height: 1rem;
+  accent-color: white;
+}
+.input-check:hover {
+  cursor: pointer;
+}
+.input-check:hover::after {
+  visibility: visible;
+  box-shadow: 0 0 5px 2px #3B9AF0;
+}
+.input-check::after {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: solid 1px #054A89;
+  border-radius: 4px;
+}
+.input-check::before {
+  visibility: visible;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background: #054A89;
+  border-radius: 2px;
+}
+.input-check:checked::before {
+  transform: scale(0.6);
+}
+
+.input-check1 {
+  /* ...existing styles */
+  place-content: center;
+  position: relative;
+  accent-color: white;
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+.input-check1:hover {
+  box-shadow: 0 0 5px 2px #3B9AF0;
+  visibility: visible;
+}
+.input-check1::after {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  width: 1rem;
+  height: 1rem;
+  border: solid 2px #054A89;
+  border-radius: 4px;
+}
+.input-check1::before {
+  visibility: visible;
+  content: "";
+  transform: scale(0);
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: #054A89;
+}
+.input-check1:checked::before {
+  transition: transform ease-in-out;
+  transform: scale(0.8);
 }
 
 .appbar {

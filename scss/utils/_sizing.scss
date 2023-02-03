@@ -1,3 +1,27 @@
+// ********** SIZING *********** //
+
+$size-list:(
+    "100": 100%,
+    "80": 80%,
+    "60": 60%,
+    "50": 50%,
+    "40": 40%,
+    "20": 20%,
+);
+
+
+@each $name, $value in $size-list {
+    .w-#{$name} {
+        width: $value ;
+    }
+    .h-#{$name} {
+        height: $value;
+
+    }
+}
+
+
+
 /*************** SIZE LIST ***************/
 $size-list: (
     "xxs": 0.125rem,
@@ -13,9 +37,11 @@ $size-list: (
 @each $name,
 $value in $size-list {
     .p-#{$name} {
-        padding-top: $value;
-        padding-bottom: $value;
+   
         padding: $value;
+    }
+    .m-#{$name} {
+        margin: $value;
     }
     // .pt-#{$name} {
     //     padding-top: $value;
@@ -31,4 +57,3 @@ $value in $size-list {
     //     padding-right: $value;
     // }
 }
-

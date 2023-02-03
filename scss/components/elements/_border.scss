@@ -1,0 +1,21 @@
+
+.rounded-sm{
+    border-radius: 0.25rem;
+}
+
+.rounded-md{
+    border-radius: 0.5rem;
+}
+
+.rounded-lg{
+    border-radius: 100%;
+}
+
+
+.box-dashed{
+    // border: 1px dashed  #7B61FF;
+    border: 4px dashed #7B61FF;
+    @extend .rounded-sm;
+    padding: 20px 32px;
+
+}

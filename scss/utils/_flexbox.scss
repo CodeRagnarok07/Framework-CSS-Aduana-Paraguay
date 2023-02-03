@@ -1,0 +1,37 @@
+
+// ********** flexbox *********** //
+.flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+$justify-list:(
+    start	: flex-start,
+    end	: flex-end,
+    center	: center,
+    between	: space-between,
+    around	: space-around,
+    evenly	: space-evenly,
+);
+
+
+//  bg-primary
+@each $name, $value in $justify-list {
+    .justify-#{$name} {
+        justify-content: $value;
+    }
+    .items-#{$name} {
+        flex-wrap: wrap;
+        align-content: $value;
+    }
+}
+
+
+
+
+
+
+
