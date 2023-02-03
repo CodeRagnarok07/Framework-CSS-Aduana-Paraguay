@@ -13,8 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.6.0",
+    "sass": "^1.57.1",
     "gh-pages": "^5.0.0",
-    "live-server": "^1.2.2",
-    "sass": "^1.57.1"
+    "live-server": "^1.2.2"
   }
 }
