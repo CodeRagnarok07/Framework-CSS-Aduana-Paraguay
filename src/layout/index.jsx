@@ -9,9 +9,9 @@ export default function MyApp({ children }) {
         <React.Fragment>
             <Navbar />
 
-            <main className='flex h-100' >
+            <main className='flex h-full' >
                 <Sidebar />
-                <div className='w-100'>
+                <div className='w-full'>
 
                 {/* {children} */}
 

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-container {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* p-4 flex flex-col items-center justify-center gap-2 */
+};
+
+
+
+

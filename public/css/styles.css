@@ -1052,9 +1052,10 @@ small,
   padding: 20px 32px;
 }
 
-.form-group {
+.input-group {
   display: flex;
-  gap: 10px;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .input-check {
@@ -1066,13 +1067,6 @@ small,
   width: 1rem;
   height: 1rem;
   accent-color: white;
-}
-.input-check:hover {
-  cursor: pointer;
-}
-.input-check:hover::after {
-  visibility: visible;
-  box-shadow: 0 0 5px 2px #3B9AF0;
 }
 .input-check::after {
   content: "";
@@ -1096,48 +1090,116 @@ small,
 .input-check:checked::before {
   transform: scale(0.6);
 }
-
-.input-check1 {
-  /* ...existing styles */
-  place-content: center;
-  position: relative;
-  accent-color: white;
-  display: flex;
-  border: none;
-  border-radius: 5px;
-  width: 1em;
-  height: 1em;
+.input-check:hover, .input-check:focus, .input-check.input-hover {
   cursor: pointer;
 }
-.input-check1:hover {
+.input-check:hover::after, .input-check:focus::after, .input-check.input-hover::after {
+  visibility: visible;
   box-shadow: 0 0 5px 2px #3B9AF0;
-  visibility: visible;
 }
-.input-check1::after {
-  content: "";
-  visibility: visible;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0px;
-  right: 0px;
+.input-check:disabled::before {
+  background: #C4C4C4;
+}
+.input-check:disabled::after {
+  border-color: #C4C4C4;
+}
+.input-check:disabled:hover::after {
+  box-shadow: none;
+}
+
+.input-radio {
+  accent-color: #054A89;
   width: 1rem;
   height: 1rem;
-  border: solid 2px #054A89;
-  border-radius: 4px;
+  position: relative;
 }
-.input-check1::before {
-  visibility: visible;
+.input-radio:hover::before, .input-radio:focus::before, .input-radio.input-hover::before {
   content: "";
-  transform: scale(0);
   position: absolute;
-  width: 1em;
-  height: 1em;
-  background-color: #054A89;
+  border-radius: 100%;
+  left: 0.8px;
+  top: 0.8px;
+  width: 90%;
+  height: 90%;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #3B9AF0;
 }
-.input-check1:checked::before {
-  transition: transform ease-in-out;
-  transform: scale(0.8);
+.input-radio:hover:disabled, .input-radio:focus:disabled, .input-radio.input-hover:disabled {
+  cursor: none;
+}
+.input-radio:hover:disabled::before, .input-radio:focus:disabled::before, .input-radio.input-hover:disabled::before {
+  box-shadow: none;
+}
+
+label {
+  width: max-content;
+  white-space: nowrap;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #D0D0D0;
+  border-radius: 4px;
+  padding: 10px 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.input.input-sm {
+  padding: 5px 1rem;
+}
+.input.input-lg {
+  padding: 14px 1rem;
+}
+.input.input-success {
+  border: 1px solid #22514C;
+}
+.input.input-success:focus, .input.input-success:hover {
+  box-shadow: 0 0 5px 2px #00B89F;
+}
+.input.input-error {
+  border: 1px solid #C10000;
+}
+.input.input-error:focus, .input.input-error:hover {
+  box-shadow: 0 0 5px 2px #FF0000;
+}
+.input:disabled:hover {
+  cursor: auto;
+  box-shadow: none;
+}
+.input:focus, .input:hover {
+  outline: none;
+  box-shadow: 0 0 5px 2px #3B9AF0;
+}
+.input span {
+  margin: 0px;
+  line-height: 0px;
+  height: min-content;
+  background-color: red;
+  color: #808080;
+}
+.input input {
+  width: max-content;
+  outline: none;
+}
+.input[type=password] {
+  position: relative;
+}
+.input[type=password]::after {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Material Design Icons";
+  content: "\f054";
+  width: 1rem;
+  height: 1rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
 }
 
 .appbar {
@@ -1162,6 +1224,52 @@ small,
   border-bottom: 1px #427DA6 solid;
   border-top: 1px #427DA6 solid;
   color: #3B9AF0;
+}
+section {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 4rem;
+  border-bottom: solid 2px #054A89;
+}
+
+.codebox {
+  background-color: #222;
+  border-radius: 12px;
+  max-width: 100%;
+  box-shadow: 1px 3px 18px 0 #222;
+}
+.codebox header {
+  padding: 12px 15px;
+  background-color: #444;
+  border-radius: 12px 12px 0 0;
+  line-height: 0;
+}
+.codebox header span {
+  height: 16px;
+  width: 16px;
+  margin-right: 6px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+.codebox header span:nth-child(1) {
+  background-color: #ff5c5c;
+}
+.codebox header span:nth-child(2) {
+  background-color: #ffbd4c;
+}
+.codebox header span:nth-child(3) {
+  background-color: #00ca56;
+}
+.codebox code {
+  color: rgb(138, 161, 255);
+  font-size: 12px;
+  line-height: 1.2;
+}
+.codebox code pre {
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

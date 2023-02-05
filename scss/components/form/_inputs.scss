@@ -1,0 +1,207 @@
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+
+.input-check {
+    /* ...existing styles */
+    display: grid;
+    position: relative;
+    place-content: center;
+    visibility: hidden;
+    width: 1rem;
+    height: 1rem;
+    accent-color: white;
+
+    &::after {
+        content: "";
+        visibility: visible;
+        position: absolute;
+        // @include inset(0,0,0,0);
+
+
+        width: 1rem;
+        height: 1rem;
+        border: solid 1px v.$primary;
+
+        border-radius: 4px;
+
+
+    }
+
+    &::before {
+        visibility: visible;
+        width: 1rem;
+        height: 1rem;
+        content: "";
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        background: v.$primary;
+        border-radius: 2px;
+        // box-shadow: inset 1em 1em v.$primary;
+
+
+    }
+
+    &:checked::before {
+        transform: scale(0.6);
+    }
+
+    &:hover,
+    &:focus,
+    &.input-hover {
+        cursor: pointer;
+
+        &::after {
+            visibility: visible;
+            box-shadow: 0 0 5px 2px v.$primary-light;
+        }
+    }
+
+    &:disabled {
+        &::before {
+            background: v.$gray-600;
+        }
+
+        &::after {
+            border-color: v.$gray-600;
+        }
+
+        &:hover {
+            &::after {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.input-radio {
+    accent-color: v.$primary;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+
+
+
+    &:hover,
+    &:focus,
+    &.input-hover {
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            left: 0.8px;
+            top: 0.8px;
+            width: 90%;
+            height: 90%;
+            cursor: pointer;
+            box-shadow: 0 0 10px 2px v.$primary-light;
+        }
+
+        &:disabled {
+            cursor: none;
+            &::before {
+                box-shadow: none;
+            }
+        }
+
+
+    }
+
+}
+
+
+label {
+    width: max-content;
+    white-space: nowrap;
+}
+
+.input {
+    width: 100%;
+    // min-width: 270px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    padding: 10px 1rem;
+
+    // size
+    &.input-sm {
+        padding: 5px 1rem;
+    }
+
+    &.input-lg {
+        padding: 14px 1rem;
+    }
+
+
+
+
+    // sate
+    &.input-success {
+        border: 1px solid v.$success-dark;
+
+        &:focus,
+        &:hover {
+            box-shadow: 0 0 5px 2px v.$success-light;
+        }
+    }
+    &.input-error {
+        border: 1px solid v.$error-dark;
+
+        &:focus,
+        &:hover {
+            box-shadow: 0 0 5px 2px v.$error;
+        }
+    }
+
+    &:disabled {
+
+        &:hover {
+            cursor: auto;
+
+            box-shadow: none;
+        }
+
+    }
+
+    &:focus,
+    &:hover {
+        outline: none;
+        box-shadow: 0 0 5px 2px v.$primary-light;
+    }
+
+    display: flex; 
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+    
+    span{
+        margin: 0px;
+        line-height: 0px;
+        height: min-content;
+        background-color: red;
+        color: v.$gray-800;
+
+    }
+    input{
+        width: max-content;
+        outline: none;
+    }
+
+
+    &[type="password"]{
+        position: relative;
+        &::after {
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Material Design Icons';
+            content: "\f054";
+
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}
