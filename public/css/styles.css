@@ -1229,6 +1229,7 @@ section {
   margin: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
   padding-bottom: 4rem;
   border-bottom: solid 2px #054A89;
@@ -1267,6 +1268,7 @@ section {
   color: rgb(138, 161, 255);
   font-size: 12px;
   line-height: 1.2;
+  font-weight: 700;
 }
 .codebox code pre {
   padding: 1rem;

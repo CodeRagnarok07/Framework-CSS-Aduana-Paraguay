@@ -6,17 +6,17 @@ export default function Section({ title, code, children }) {
         <section>
             <h3 className="h3">{title}</h3>
 
-            <div className="w-full flex flex-col items-center justify-center gap-8">
+            <div className="w-full flex flex-col items-start justify-center gap-8">
 
 
 
                 {children}
-
-                    {code && 
-                <Codebox>
-                    {code}
-                </Codebox>
+                {code &&
+                    <div className='mx-auto'>
+                        <Codebox code={code} />
+                    </div>
                 }
+
             </div>
 
         </section>

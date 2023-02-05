@@ -9,7 +9,7 @@ section{
     margin: 1rem;
     display: flex;
     flex-direction: column;
-
+    align-items: flex-start;
     gap: 2rem;
     padding-bottom: 4rem;
     border-bottom: solid 2px v.$primary;
@@ -54,6 +54,7 @@ section{
         color: rgb(138, 161, 255);
         font-size: 12px;
         line-height: 1.2;
+        font-weight: 700;
         pre{
             padding: 1rem;
         }

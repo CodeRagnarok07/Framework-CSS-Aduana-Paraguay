@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function codebox({children}) {
+export default function codebox({code}) {
     return (
         <div class="codebox">
 
@@ -11,7 +11,7 @@ export default function codebox({children}) {
             </header>
             <code>
                 <pre>
-                    {children}                 
+                    {code}                 
                 </pre>
             </code>
 
