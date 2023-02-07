@@ -1,0 +1,23 @@
+
+
+.bdg{
+    padding: 4px 8px;
+    border-radius: v.$radius-sm;
+
+
+
+    &.tl{
+        @include inset(0,0);
+    }
+
+    &.tr{
+        @include inset(0,auto,auto,0);
+
+    }
+
+    &.t{
+        @include inset(0,0,0);
+
+    }
+
+}

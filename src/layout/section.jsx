@@ -11,11 +11,11 @@ export default function Section({ title, text, code, type, children }) {
                     {text &&
                         <p>{text}</p>
                     }
-                    <div className="flex  gap-8">
+                    <div className="flex w-full gap-8">
 
                         {children}
 
-                        {code && <div className='mx-auto'><Codebox code={code} /></div>}
+                        {code && <div ><Codebox code={code} /></div>}
 
 
                     </div>

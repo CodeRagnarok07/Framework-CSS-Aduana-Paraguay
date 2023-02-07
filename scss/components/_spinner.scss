@@ -1,0 +1,51 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner1 {
+    --size: 1.25rem;
+    --border: 2px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: relative;
+    border: var(--border) solid v.$primary-light;
+    border-right: var(--border) solid transparent;
+    border-left: var(--border) solid transparent;
+    animation: spin 1s linear infinite;
+}
+
+.snniper {
+    --size: 1.25rem;
+
+    animation: spin 2s linear infinite;
+    @extend .text-primary-light;
+
+    &.sm {
+        --size: 0.75rem;
+    }
+
+    &.lg {
+        --size: 2.25rem;
+    }
+
+    width: var(--size);
+    height: var(--size);
+
+  
+}
+
+
+
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

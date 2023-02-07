@@ -7,18 +7,26 @@ import Layer from '../layout/index'
 import Colapse from './collapse'
 import Avatar from './avatar'
 import Inputs from './inputs'
+import Index from './index'
 import Font from './font'
 import Color from './color'
+import Placeholder from './placeholder'
 import Button from './elements/button'
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layer></Layer>,
+        element: <Layer>
+            <Index/>
+        </Layer>,
     },
     {
         path: "/font",
         element: <Layer><Font /></Layer>,
+    },
+    {
+        path: "/placeholder",
+        element: <Layer><Placeholder /></Layer>,
     },
     {
         path: "/color",

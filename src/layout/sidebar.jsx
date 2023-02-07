@@ -36,33 +36,29 @@ export default function sidebar() {
 
         <a href="/color">
 
-<li className="appbar-item ">
-  <span class="material-symbols-outlined">
-    grade
-  </span>
+          <li className="appbar-item ">
+            <span class="material-symbols-outlined">
+              grade
+            </span>
 
-  <span>
-    color
-  </span>
-</li>
-</a>
+            <span>
+              color
+            </span>
+          </li>
+        </a>
 
-<a href="/font">
+        <a href="/font">
 
-<li className="appbar-item ">
-  <span class="material-symbols-outlined">
-    grade
-  </span>
+          <li className="appbar-item ">
+            <span class="material-symbols-outlined">
+              grade
+            </span>
 
-  <span>
-    font
-  </span>
-</li>
-</a>
-
-
-
-
+            <span>
+              font
+            </span>
+          </li>
+        </a>
 
         <a href="/inputs">
           <li className="appbar-item">
@@ -78,8 +74,6 @@ export default function sidebar() {
           </li>
         </a>
 
-      
-
         <a href="/collapse">
 
           <li className="appbar-item">
@@ -94,7 +88,7 @@ export default function sidebar() {
         </a>
 
 
-        
+
         <a href="/avatar">
 
           <li className="appbar-item">
@@ -107,6 +101,21 @@ export default function sidebar() {
             </span>
           </li>
         </a>
+
+        
+        <a href="/placeholder">
+
+          <li className="appbar-item">
+            <span class="material-symbols-outlined">
+              grade
+            </span>
+
+            <span>
+              placeholder
+            </span>
+          </li>
+        </a>
+
 
 
       </ul>

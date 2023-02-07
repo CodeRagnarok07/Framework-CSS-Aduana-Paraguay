@@ -71,7 +71,7 @@ export default function button() {
 
 
             <Section title={"estilos"} type="2"
-    code={`<div className="btn-sm btn-primary">
+                code={`<div className="btn-sm btn-primary">
     <span class="material-symbols-outlined">
         warning
     </span>
@@ -117,10 +117,10 @@ export default function button() {
 
                 </div>
             </Section>
-            
-            
+
+
             <Section title={"Colores"} type="2"
-    code={`<div className="btn-sm btn-primary">
+                code={`<div className="btn-sm btn-primary">
     <span class="material-symbols-outlined">
         warning
     </span>
@@ -149,32 +149,42 @@ export default function button() {
                         <span class="material-symbols-outlined">
                             warning
                         </span>
-                         btn-primary
+                        btn-primary
                     </div>
                     <div className="btn-sm btn-secondary">
                         <span class="material-symbols-outlined">
                             warning
                         </span>
-                         btn-secondary
+                        btn-secondary
                     </div>
                     <div className="btn-sm btn-success">
                         <span class="material-symbols-outlined">
                             warning
                         </span>
-                         btn-success
+                        btn-success
                     </div>
                     <div className="btn-sm btn-error">
                         <span class="material-symbols-outlined">
                             warning
                         </span>
-                         btn-error
+                        btn-error
                     </div>
 
-                
-
-
-
                 </div>
+            </Section>
+
+            <Section text={"Links"}>
+
+                <div>
+
+                    <div className="flex flex-col gap-8">
+                <a href="">Link nombre</a>
+
+                    </div>
+                </div>
+
+
+
             </Section>
 
         </>

@@ -2,36 +2,51 @@
 
 
 @mixin text-contrast($n) {
-    $color-brightness: round((red($n) * 299) + (green($n) * 587) +  calc((blue($n) * 114) / 1000));
-    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + calc((blue(#ffffff) * 114) / 1000));
-    
-    @if abs($color-brightness) < calc($light-color / 2){
-      color: white;
-    }
-  
-    @else {
-      color: black;
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + calc((blue($n) * 114) / 1000));
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + calc((blue(#ffffff) * 114) / 1000));
+
+  @if abs($color-brightness) < calc($light-color / 2) {
+    color: white;
+    path {
+      fill: white;
     }
   }
+
+  @else {
+    color: black;
+    path {
+      fill: black;
+    }
+  }
+}
 
 
 
 // // ******** Colors ********** 
 
 //  bg-primary
-@each $color, $value in v.$theme-colors {
-    $color-rgb: to-rgb($value);
-    .bg-#{$color} {
-        @include text-contrast($value);
-        background-color: $value;
-    }
-}
-
-//  text-primary
-@each $color, $value in v.$theme-colors {
+@each $color,
+$value in v.$theme-colors {
   $color-rgb: to-rgb($value);
-  .text-#{$color} {
-      color: $value;
+
+  .bg-#{$color} {
+    @include text-contrast($value);
+    background-color: $value;
+
+
   }
 }
 
+//  text-primary
+@each $color,
+$value in v.$theme-colors {
+  $color-rgb: to-rgb($value);
+
+  .text-#{$color} {
+    color: $value;
+
+    path {
+      fill: $value;
+    }
+  }
+}
