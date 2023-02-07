@@ -1,8 +1,11 @@
 @use 'vars/vars' as v;
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" );
 @import 'reset';
 @import 'styles/styles';
 @import 'components/components';
 // @import 'utils/utils';
+
 
 
 section{
@@ -55,7 +58,10 @@ section{
         font-size: 12px;
         line-height: 1.2;
         font-weight: 700;
+
         pre{
+            max-width: 700px;
+            overflow-x: scroll;
             padding: 1rem;
         }
     }

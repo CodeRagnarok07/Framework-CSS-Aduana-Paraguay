@@ -1,14 +1,14 @@
 
 .rounded-sm{
-    border-radius: 0.25rem;
+    border-radius: v.$radius-sm;
 }
 
 .rounded-md{
-    border-radius: 0.5rem;
+    border-radius: v.$radius-md;
 }
 
 .rounded-lg{
-    border-radius: 100%;
+    border-radius: v.$radius-lg;
 }
 
 

@@ -1,6 +1,5 @@
 import Section from "../../layout/section"
 
-import Codebox from "../../layout/codebox"
 export default function MyaApp() {
 
 
@@ -22,32 +21,39 @@ export default function MyaApp() {
 `
 
   return (
-    <div>
+    <>
 
-      <Section title="Inputs" >
-
-        <div className="flex justify-around gap-8">
-
-          <form className="grid grid-cols-2 gap-8">
-
-            <h3 className="h3 font-bold">Text</h3>
-            <h3 className="h3 font-bold">Number</h3>
-
-            <input className="input" type="text" placeholder="input text" />
-            <input className="input" type="number" placeholder="input text" />
+      <Section title="Inputs" code={`<input className="input" type="text" placeholder="input text" />
+<input className="input" type="number" placeholder="input text" />`} >
 
 
-          </form>
-          < Codebox code={`<input className="input" type="text" placeholder="input text" />
-<input className="input" type="number" placeholder="input text" />`}/>
-            
-       
+        <form className="grid grid-cols-2 gap-8">
 
-        </div>
+          <h3 className="h3 font-bold">Text</h3>
+          <h3 className="h3 font-bold">Number</h3>
+
+          <input className="input" type="text" placeholder="input text" />
+          <input className="input" type="number" placeholder="input text" />
+
+
+        </form>
+
+
+      </Section>
+
+      <Section type={true} title={"Icons"}
+        code={`<div className="input">
+  <span className="material-symbols-outlined">
+    key
+  </span>
+  <input type="text" placeholder="input disabled" />
+  <span className="material-symbols-outlined">
+    visibility
+  </span>
+</div>`} >
 
 
         {/* ICONS */}
-        <h3 className="h3 font-bold">Icons</h3>
         <div className="flex items-start gap-8">
 
           <div className="input">
@@ -60,22 +66,20 @@ export default function MyaApp() {
             </span>
           </div>
 
-< Codebox code={`<div className="input">
+
+        </div>
+
+      </Section>
+
+      <Section type={true} title={"Password"} text={"el botón que muestra la contraseña será agregado automáticamente al final del contenedor del input, para no romper el componente no se debe agregar otro elemento después del input"}
+        code={`<div className="input">
   <span className="material-symbols-outlined">
     key
   </span>
-  <input type="text" placeholder="input disabled" />
-  <span className="material-symbols-outlined">
-    visibility
-  </span>
-</div>`} />
-        </div>
+  <input className="input-password" type="password" placeholder="input password" />
+</div>`}>
 
 
-
-        {/* paasword */}
-        <h3 className="h3 font-bold">Password</h3>
-        <p>el botón que muestra la contraseña será agregado automáticamente al final del contenedor del input, para no romper el componente no se debe agregar otro elemento después del input</p>
         <div className="flex items-start gap-8">
           <div className="input">
             <span className="material-symbols-outlined">
@@ -84,81 +88,41 @@ export default function MyaApp() {
             <input className="input-password" type="password" placeholder="input password" />
           </div>
 
-          < Codebox code={`<div className="input">
-  <span className="material-symbols-outlined">
-    key
-  </span>
-  <input className="input-password" type="password" placeholder="input password" />
-</div>`} />
-            
         </div>
 
+      </Section>
 
 
-        {/* icons */}
-        <h3 className="h3  font-bold">icons</h3>
-        <div className="flex items-center gap-8">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <div className="input">
-                <span className="material-symbols-outlined">
-                  key
-                </span>
-                <input type="text" placeholder="input disabled" />
-                <span className="material-symbols-outlined">
-                  visibility
-                </span>
-              </div>
-            </li>
-          </ul>
+      <Section type={true} title={"Estados"}
+        code={`<input className="input input-success" type="text" placeholder="input-success" />
 
-          <Codebox code={`<div className="input">
-  <span className="material-symbols-outlined">
-    key
-  </span>
-  <input type="text" placeholder="input disabled" />
-  <span className="material-symbols-outlined">
-    visibility
-  </span>
-</div>`} />
-        
-        </div>
+<input className="input input-error" type="text" placeholder="input-error" />
 
-
-        {/* states */}
-        <h3 className="h3  font-bold">Estados</h3>
+<input className="input" type="text" placeholder="input disabled" disabled />`}>
         <div className="flex items-center gap-8">
           <ul className="flex flex-col gap-4">
             <li><input className="input input-success" type="text" placeholder="input-success" /></li>
             <li><input className="input input-error" type="text" placeholder="input-error" /></li>
             <li><input className="input" type="text" placeholder="input disabled" disabled /></li>
           </ul>
-
-          < Codebox code={`<input className="input input-success" type="text" placeholder="input-success" />
-
-<input className="input input-error" type="text" placeholder="input-error" />
-
-<input className="input" type="text" placeholder="input disabled" disabled />`}/>
-
         </div>
 
+      </Section>
 
+      <Section type={true} title={"Tamaños"}
+        code={` 
+<input className="input" type="text" placeholder="tamaño base" />
 
-        {/* tamaños */}
-        <h3 className="h3  font-bold">Tamaños</h3>
-        <div className="flex items-center gap-8">
-          <ul className="flex flex-col gap-4">
-            <li><input className="input" type="text" placeholder="tamaño base" /></li>
-            <li><input className="input input-sm" type="text" placeholder="input-sm" /></li>
-            <li><input className="input input-lg" type="text" placeholder="input-md" /></li>
-          </ul>
+<input className="input input-sm" type="text" placeholder="input-sm" />
 
-          < Codebox code={`<input className="input input-success" type="text" placeholder="input-success" />
+<input className="input input-lg" type="text" placeholder="input-md" />
 
-<input className="input input-error" type="text" placeholder="input-error" />
-
-<input className="input" type="text" placeholder="input disabled" disabled />`}/>
-        </div>
+            `} >
+        <ul className="flex flex-col gap-4">
+          <li><input className="input" type="text" placeholder="tamaño base" /></li>
+          <li><input className="input input-sm" type="text" placeholder="input-sm" /></li>
+          <li><input className="input input-lg" type="text" placeholder="input-lg" /></li>
+        </ul>
 
       </Section>
 
@@ -309,6 +273,6 @@ export default function MyaApp() {
 
 
 
-    </div>
+    </ >
   )
 }

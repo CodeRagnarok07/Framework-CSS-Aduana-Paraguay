@@ -1,0 +1,83 @@
+.accordion {
+    padding: 1rem;
+    width: 100%;
+
+}
+
+.collapsible {
+    width: 100%;
+
+    &.active {
+        // transition: 120ms transform ease-in-out;
+
+        span {
+            border-bottom: 2px v.$primary-light solid;
+            color: v.$primary;
+
+            &::before {
+                transform: rotate(90deg);
+                transition: 120ms transform ease-in-out;
+
+            }
+        }
+
+        p {
+            display: flex;
+            -webkit-transition: max-height 2s ease-in-out; 
+            -moz-transition: max-height 2s ease-in-out; 
+            -ms-transition: max-height 2s ease-in-out; 
+            -o-transition: max-height 2s ease-in-out; 
+            transition: max-height 2s ease-in-out; 
+            max-height: 300px;
+        }
+
+        
+    }
+
+    p {
+        display: none;
+        overflow: hidden;
+        margin: 1rem 0rem 1.5rem;
+        max-height: 0px;
+    }
+
+
+    span {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: center;
+        // width: 30%;
+        // grid-template-columns: repeat(3, minmax(0, 1fr));
+        white-space: nowrap;
+        border-bottom: 2px v.$secondary-dark solid;
+        padding: 10px 0px;
+
+
+
+        // sun
+        &::after {
+            font-family: "Material Symbols Outlined";
+            content: "\e430";
+            margin: 0px 10px 0px 20px;
+            font-size: 20px;
+
+        }
+
+        &::before {
+
+            font-family: "Material Symbols Outlined";
+            content: "\e5e1";
+            order: 1;
+
+
+        }
+    }
+
+
+
+
+
+}

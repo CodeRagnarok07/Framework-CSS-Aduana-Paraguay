@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './navbar'
 import Sidebar from './sidebar'
 
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 
 export default function MyApp({ children }) {
     return (
@@ -11,11 +11,10 @@ export default function MyApp({ children }) {
 
             <main className='flex h-full' >
                 <Sidebar />
-                <div className='w-full'>
+                <div className='w-full m-8'>
 
-                {/* {children} */}
+                {children}
 
-                <Outlet/>
                 </div>
             </main>
 

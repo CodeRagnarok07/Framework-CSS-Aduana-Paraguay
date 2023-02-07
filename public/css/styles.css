@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
 /*************** COLORS ***************/ /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -829,7 +830,7 @@ small,
 }
 
 /*************** THEME COLORS ***************/
-.bg-primary, .appbar ul, .btn-primary div {
+.bg-primary, .appbar ul {
   color: white;
   background-color: #054A89;
 }
@@ -845,7 +846,7 @@ small,
 }
 
 .bg-secondary, .appbar ul li:hover,
-.appbar ul li .selected, .btn-secondary div {
+.appbar ul li .selected {
   color: black;
   background-color: #E5EEEF;
 }
@@ -855,7 +856,7 @@ small,
   background-color: #C8E7EB;
 }
 
-.bg-success, .btn-success div {
+.bg-success {
   color: white;
   background-color: #1D7D74;
 }
@@ -870,7 +871,7 @@ small,
   background-color: #EE8030;
 }
 
-.bg-error, .btn-error div {
+.bg-error {
   color: white;
   background-color: #FF0000;
 }
@@ -935,7 +936,10 @@ small,
   padding: 4px 8px;
   border-radius: 0.25rem;
   border: solid 1px;
+  cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -943,7 +947,10 @@ small,
   padding: 8px 16px;
   border-radius: 0.25rem;
   border: solid 1px;
+  cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -951,7 +958,10 @@ small,
   padding: 12px 24px;
   border-radius: 0.25rem;
   border: solid 1px;
+  cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -959,7 +969,10 @@ small,
   padding: 14px 28px;
   border-radius: 0.25rem;
   border: solid 1px;
+  cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -967,9 +980,6 @@ small,
   color: white;
   background-color: #054A89;
   border-color: #054A89;
-}
-.btn-primary svg path {
-  fill: #054A89;
 }
 .btn-primary.btn-outline {
   background-color: transparent;
@@ -986,9 +996,6 @@ small,
   background-color: #E5EEEF;
   border-color: #E5EEEF;
 }
-.btn-secondary svg path {
-  fill: #E5EEEF;
-}
 .btn-secondary.btn-outline {
   background-color: transparent;
   color: #E5EEEF;
@@ -1004,9 +1011,6 @@ small,
   background-color: #1D7D74;
   border-color: #1D7D74;
 }
-.btn-success svg path {
-  fill: #1D7D74;
-}
 .btn-success.btn-outline {
   background-color: transparent;
   color: #1D7D74;
@@ -1021,9 +1025,6 @@ small,
   color: white;
   background-color: #FF0000;
   border-color: #FF0000;
-}
-.btn-error svg path {
-  fill: #FF0000;
 }
 .btn-error.btn-outline {
   background-color: transparent;
@@ -1075,7 +1076,7 @@ small,
   width: 1rem;
   height: 1rem;
   border: solid 1px #054A89;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 .input-check::before {
   visibility: visible;
@@ -1139,7 +1140,7 @@ label {
 .input {
   width: 100%;
   border: 1px solid #D0D0D0;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 10px 1rem;
   display: flex;
   align-items: center;
@@ -1203,8 +1204,8 @@ label {
 }
 
 .appbar {
-  height: 100%;
   display: flex;
+  min-height: 100%;
 }
 .appbar ul {
   width: max-content;
@@ -1214,6 +1215,7 @@ label {
   padding: 1rem 1.5rem;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 .appbar ul li:hover,
 .appbar ul li .selected {
@@ -1225,6 +1227,91 @@ label {
   border-top: 1px #427DA6 solid;
   color: #3B9AF0;
 }
+.appbar ul li.appbar-item .subitem-title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.appbar ul li.appbar-item.active {
+  background-color: #FFFFFF;
+  color: #054A89;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-content: center;
+  background-color: #E9E9E9;
+  border-radius: 100%;
+}
+.avatar.avatar-xs {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.avatar.avatar-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.avatar.avatar-lg {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.accordion {
+  padding: 1rem;
+  width: 100%;
+}
+
+.collapsible {
+  width: 100%;
+}
+.collapsible.active span {
+  border-bottom: 2px #3B9AF0 solid;
+  color: #054A89;
+}
+.collapsible.active span::before {
+  transform: rotate(90deg);
+  transition: 120ms transform ease-in-out;
+}
+.collapsible.active p {
+  display: flex;
+  -webkit-transition: max-height 2s ease-in-out;
+  -moz-transition: max-height 2s ease-in-out;
+  -ms-transition: max-height 2s ease-in-out;
+  -o-transition: max-height 2s ease-in-out;
+  transition: max-height 2s ease-in-out;
+  max-height: 300px;
+}
+.collapsible p {
+  display: none;
+  overflow: hidden;
+  margin: 1rem 0rem 1.5rem;
+  max-height: 0px;
+}
+.collapsible span {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  white-space: nowrap;
+  border-bottom: 2px #C8E7EB solid;
+  padding: 10px 0px;
+}
+.collapsible span::after {
+  font-family: "Material Symbols Outlined";
+  content: "\e430";
+  margin: 0px 10px 0px 20px;
+  font-size: 20px;
+}
+.collapsible span::before {
+  font-family: "Material Symbols Outlined";
+  content: "\e5e1";
+  order: 1;
+}
+
 section {
   margin: 1rem;
   display: flex;
@@ -1271,6 +1358,8 @@ section {
   font-weight: 700;
 }
 .codebox code pre {
+  max-width: 700px;
+  overflow-x: scroll;
   padding: 1rem;
 }
 

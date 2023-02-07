@@ -1,0 +1,28 @@
+
+
+.avatar{
+    width: 5rem;
+    height: 5rem;
+
+    display: grid;
+    place-content: center;
+
+
+    background-color: v.$gray-400;
+
+    border-radius: v.$radius-lg;
+
+    &.avatar-xs{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &.avatar-sm{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    &.avatar-lg{
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}

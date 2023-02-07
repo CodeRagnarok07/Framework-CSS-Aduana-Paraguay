@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between p-xl bg-primary">
+    <div className="flex justify-between px-8 py-4 bg-primary">
       <a href="/" className="flex items-center gap-4">
         <div>
           <svg width="38" height="13" viewBox="0 0 38 13" fill="none" xmlns="http://www.w3.org/2000/svg">

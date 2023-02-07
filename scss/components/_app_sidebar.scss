@@ -1,11 +1,9 @@
 .appbar {
-    height: 100%;
 
     display: flex;
-
+    min-height: 100%;
     ul {
         @extend .bg-primary;
-
         width: max-content;
         height: 100%;
 
@@ -13,6 +11,8 @@
             padding: 1rem 1.5rem;
             display: flex;
             gap: 20px;
+            align-items: center;
+
             &:hover,
             .selected {
                 @extend .bg-secondary;
@@ -21,6 +21,7 @@
                 box-shadow: 4px 0px 0px 0px rgba(57, 73, 171, 1) inset;
 
             }
+
             &.appbar-title {
                 border-bottom: 1px v.$primary-dark solid;
                 border-top: 1px v.$primary-dark solid;
@@ -28,10 +29,25 @@
             }
 
             &.appbar-item {
-           
-      
+
+
+                .subitem-title {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
 
                 }
+
+                &.active {
+                    background-color: v.$white;
+                    color: v.$primary;
+                }
+
+               
+            }
+
+
+
         }
     }
 }
