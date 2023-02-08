@@ -1,9 +1,46 @@
+.link {
 
-.link{
+    @extend.btn-sm;
+    color: v.$primary;
 
-    &.link-bg{
-        
+    font-weight: 400;
+    font-size: 14px;
+
+    border: none;
+
+    &:hover, &.link-disabled {
+        position: relative;
+    
+        &::after {
+            content: "";
+            position: absolute;
+            @include inset(0,0,0,0);
+            background-color: white;
+            opacity: 0.4;
+    
+        }
+    }
+    
+
+    &.outline {
+        border: 1px solid v.$primary;
+        outline: none;
+        color: v.$primary;
+
+    }
+
+    &.fill {
+        @extend .bg-primary;
+
+    }
+
+    .bdg {
+        font-size: 12px;
+    }
+
+
+    &.link-disabled{
+        pointer-events: none;
     }
 
 }
-

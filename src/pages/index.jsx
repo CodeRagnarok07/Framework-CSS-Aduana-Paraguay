@@ -20,7 +20,7 @@ export default function index() {
 
       </Section>
 
-      <Section title={"posicion"} 
+      <Section title={"posicion"}
         code={`
 
         // left top
@@ -177,6 +177,39 @@ export default function index() {
         </div>
 
       </Section>
+
+
+
+      <Section title={"Mensaje"} type={true}
+        code={`<div className="btn-sm btn-primary">
+  element
+  <div className="bdg bg-white">48</div>
+</div>`}>
+
+        <div className='grid gap-8'>
+
+          <div className="message">
+            
+            <div className='close'>
+              <div>x</div>
+            </div>
+            <span class="material-symbols-outlined">
+              error
+            </span>
+            Este mensaje es muy importante.
+          </div>
+
+          <div className="message ">
+            <span class="material-symbols-outlined">
+              error
+            </span>
+            Este mensaje es muy importante, pero es un poco más largo que el anterior, porque queremos probar que tal se ve esto en varios reglones.
+          </div>
+        </div>
+
+      </Section>
+
+
     </div>
   )
 }

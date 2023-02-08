@@ -173,12 +173,63 @@ export default function button() {
                 </div>
             </Section>
 
-            <Section text={"Links"}>
+            <Section title={"Links"}
+                type={true}
+                code={`<a href="" className='link fill'>
+    <span class="material-symbols-outlined">
+        open_in_new
+    </span>
+    Link nombre
+    <div className="bdg bg-primary">4</div>
+</a>
+
+
+<a href="" className='link outline'>
+    <span class="material-symbols-outlined">
+        open_in_new
+    </span>
+    Link nombre
+    <div className="bdg bg-primary">4</div>
+</a>
+
+<a href="" className='link'>
+    <span class="material-symbols-outlined">
+        open_in_new
+    </span>
+    Link nombre
+    <div className="bdg bg-primary">4</div>
+</a>`}
+
+            >
 
                 <div>
 
                     <div className="flex flex-col gap-8">
-                <a href="">Link nombre</a>
+
+                        <a href="" className='link fill'>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                            Link nombre
+                            <div className="bdg bg-primary">4</div>
+                        </a>
+
+
+                        <a href="" className='link outline'>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                            Link nombre
+                            <div className="bdg bg-primary">4</div>
+                        </a>
+
+                        <a href="" className='link'>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                            Link nombre
+                            <div className="bdg bg-primary">4</div>
+                        </a>
 
                     </div>
                 </div>
@@ -186,6 +237,72 @@ export default function button() {
 
 
             </Section>
+
+
+            <Section title={"Links disabled"}
+                type={true}
+                code={`
+<a href="" className='link link-disabled fill'>
+    <span class="material-symbols-outlined">
+        open_in_new
+    </span>
+    Link nombre
+    <div className="bdg bg-primary">4</div>
+</a>
+
+
+<a href="" className='link link-disabled outline'>
+    <span class="material-symbols-outlined">
+        open_in_new
+    </span>
+    Link nombre
+    <div className="bdg bg-primary">4</div>
+</a>
+
+<a href="" className='link link-disabled'>
+    <span class="material-symbols-outlined">
+        open_in_new
+    </span>
+    Link nombre
+    <div className="bdg bg-primary">4</div>
+</a>
+                `}
+
+            >
+
+                <div>
+
+                    <div className="flex flex-col gap-8">
+
+                        <a href="" className='link link-disabled fill'>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                            Link nombre
+                            <div className="bdg bg-primary">4</div>
+                        </a>
+
+
+                        <a href="" className='link link-disabled outline'>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                            Link nombre
+                            <div className="bdg bg-primary">4</div>
+                        </a>
+
+                        <a href="" className='link link-disabled'>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                            Link nombre
+                            <div className="bdg bg-primary">4</div>
+                        </a>
+
+                    </div>
+                </div>
+            </Section>
+
 
         </>
     )

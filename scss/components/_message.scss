@@ -1,0 +1,45 @@
+// @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" );
+
+.message {
+
+
+    border-radius: v.$radius-md;
+    padding: 1.15rem 1rem 1.15rem 3rem;
+    outline: 1px solid lighten(v.$gray-800, 30%);
+    border-left: 8px v.$primary solid;
+    background: lighten(v.$gray-800, 40%);
+    position: relative;
+
+    span.material-symbols-outlined {
+        font-size: 1.25rem;
+        color: lighten(v.$gray-800, 5%);
+
+        position: absolute;
+        left: 5%;
+        top: 40%;
+    }
+
+    .close {
+        margin-top: -1rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        
+        div {
+            display: grid;
+            place-content: center;
+            text-align: center;
+            cursor: pointer;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            padding-bottom: 0.25rem;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: lighten(v.$gray-800, 20%);
+            }
+        }
+    }
+
+
+}

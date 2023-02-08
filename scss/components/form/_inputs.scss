@@ -190,20 +190,19 @@ label {
     }
 
 
-    &[type="password"]{
-        position: relative;
-        &::after {
-            background-color: red;
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-family: 'Material Design Icons';
-            content: "\f054";
+    // &[type="password"]{
+    //     position: relative;
+    //     &::after {
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         font-family: 'Material Design Icons';
+    //         content: "\f054";
 
-            width: 1rem;
-            height: 1rem;
-        }
+    //         width: 1rem;
+    //         height: 1rem;
+    //     }
 
         
-    }
+    // }
 }
