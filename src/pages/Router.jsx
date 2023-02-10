@@ -12,6 +12,7 @@ import Font from './font'
 import Color from './color'
 import Placeholder from './placeholder'
 import Button from './elements/button'
+import Components from './components'
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         element: <Layer>
             <Index/>
         </Layer>,
+    },
+    {
+        path: "/components",
+        element: <Layer><Components /></Layer>,
     },
     {
         path: "/font",

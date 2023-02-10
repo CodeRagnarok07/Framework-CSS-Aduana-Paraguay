@@ -1,42 +1,67 @@
 // @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" );
 
+// MESSAGE
 .message {
-
-
-    border-radius: v.$radius-md;
-    padding: 1.15rem 1rem 1.15rem 3rem;
-    outline: 1px solid lighten(v.$gray-800, 30%);
+    margin: 1.5rem 0px;
+    background-color: red;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    outline: 1px solid lighten(#D0D0D0, 10%);
     border-left: 8px v.$primary solid;
-    background: lighten(v.$gray-800, 40%);
-    position: relative;
+    background: #D0D0D0;
+    // position: relative;
 
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    >svg {
+        // font-size: 1.25rem;
+        color: v.$primary;
+        // position: absolute;
+        min-width: 2rem;
+        left: 2%;
+        top: 40%;
+    }
+
+    
     span.material-symbols-outlined {
         font-size: 1.25rem;
         color: lighten(v.$gray-800, 5%);
 
-        position: absolute;
         left: 5%;
         top: 40%;
     }
 
-    .close {
-        margin-top: -1rem;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        
-        div {
-            display: grid;
-            place-content: center;
-            text-align: center;
-            cursor: pointer;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            padding-bottom: 0.25rem;
-            border-radius: 8px;
 
-            &:hover {
-                background-color: lighten(v.$gray-800, 20%);
+    .content {
+        position: relative;
+
+        .close {
+            position: absolute;
+            @include inset(-1rem,0);
+            --size: 1.5rem;
+
+
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            font-size: 1.5rem;
+      
+            div {
+                width: var(--size);
+                height: var(--size);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                cursor: pointer;
+                padding-bottom: 0.5rem;
+                border-radius: 8px;
+
+                &:hover {
+                    background-color: lighten(rgb(108, 108, 108), 20%);
+                }
             }
         }
     }

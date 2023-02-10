@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "concurrently \"sass --watch ./scss/main.scss ./public/css/styles.css\" \"react-scripts start\" ",
+    "dev": "concurrently \"npx tailwindcss -i ./src/tailwind.css -o ./public/css/resets.css --watch\" \"sass --watch ./scss/main.scss ./public/css/styles.css\" \"react-scripts start\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

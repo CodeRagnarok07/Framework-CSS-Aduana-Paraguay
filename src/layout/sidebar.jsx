@@ -7,7 +7,7 @@ export default function sidebar() {
 
       <ul className=''>
 
-        <li className="appbar-title">
+        {/* <li className="appbar-title">
 
           <i>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,11 +15,11 @@ export default function sidebar() {
               </path><path d="M17.5 17L12.5 12L17.5 7" stroke="#3B9AF0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               </path></svg>
           </i>
-          <span>
+          <strong>
             ocultar menú
-          </span>
+          </strong>
 
-        </li>
+        </li> */}
 
         <a href="/button">
 
@@ -28,9 +28,9 @@ export default function sidebar() {
               grade
             </span>
 
-            <span>
+            <strong>
               button
-            </span>
+            </strong>
           </li>
         </a>
 
@@ -41,9 +41,9 @@ export default function sidebar() {
               grade
             </span>
 
-            <span>
+            <strong>
               color
-            </span>
+            </strong>
           </li>
         </a>
 
@@ -54,9 +54,9 @@ export default function sidebar() {
               grade
             </span>
 
-            <span>
+            <strong>
               font
-            </span>
+            </strong>
           </li>
         </a>
 
@@ -68,9 +68,9 @@ export default function sidebar() {
                 </path>
               </svg>
             </i>
-            <span>
+            <strong>
               inputs
-            </span>
+            </strong>
           </li>
         </a>
 
@@ -81,9 +81,9 @@ export default function sidebar() {
               grade
             </span>
 
-            <span>
+            <strong>
               Collapse
-            </span>
+            </strong>
           </li>
         </a>
 
@@ -96,9 +96,9 @@ export default function sidebar() {
               grade
             </span>
 
-            <span>
+            <strong>
               Avatar
-            </span>
+            </strong>
           </li>
         </a>
 
@@ -110,9 +110,9 @@ export default function sidebar() {
               grade
             </span>
 
-            <span>
+            <strong>
               placeholder
-            </span>
+            </strong>
           </li>
         </a>
 

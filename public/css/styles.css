@@ -1492,38 +1492,57 @@ label {
   }
 }
 .message {
+  margin: 1.5rem 0px;
+  background-color: red;
   border-radius: 0.5rem;
-  padding: 1.15rem 1rem 1.15rem 3rem;
-  outline: 1px solid #cdcdcd;
+  padding: 1rem;
+  outline: 1px solid #eaeaea;
   border-left: 8px #054A89 solid;
-  background: #e6e6e6;
-  position: relative;
+  background: #D0D0D0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.message > svg {
+  color: #054A89;
+  min-width: 2rem;
+  left: 2%;
+  top: 40%;
 }
 .message span.material-symbols-outlined {
   font-size: 1.25rem;
   color: #8d8d8d;
-  position: absolute;
   left: 5%;
   top: 40%;
 }
-.message .close {
-  margin-top: -1rem;
+.message .content {
+  position: relative;
+}
+.message .content .close {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  --size: 1.5rem;
   display: flex;
   justify-content: end;
   align-items: center;
+  font-size: 1.5rem;
 }
-.message .close div {
-  display: grid;
-  place-content: center;
+.message .content .close div {
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   cursor: pointer;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
   border-radius: 8px;
 }
-.message .close div:hover {
-  background-color: #b3b3b3;
+.message .content .close div:hover {
+  background-color: #9f9f9f;
 }
 
 .accordion {
