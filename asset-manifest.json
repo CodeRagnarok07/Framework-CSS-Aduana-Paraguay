@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.718eee2a.js",
-    "index.html": "/index.html",
-    "main.718eee2a.js.map": "/static/js/main.718eee2a.js.map"
+    "main.js": "/Template_Aduana_Paraguay/static/js/main.718eee2a.js",
+    "index.html": "/Template_Aduana_Paraguay/index.html",
+    "main.718eee2a.js.map": "/Template_Aduana_Paraguay/static/js/main.718eee2a.js.map"
   },
   "entrypoints": [
     "static/js/main.718eee2a.js"
