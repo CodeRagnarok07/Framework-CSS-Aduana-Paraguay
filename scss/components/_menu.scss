@@ -1,0 +1,27 @@
+.menu {
+
+    .menu-cont {
+        position: absolute;
+        position: absolute;
+        margin: 0;
+
+        min-width: max-content;
+        &.hidden {
+            display: none;
+        }
+
+
+                
+        &.left {
+            top:  0rem;
+            left: 1.5rem;
+        }
+        &.right {
+            top:  0rem;
+            right: 1.5rem;
+        }
+
+
+
+    }
+}

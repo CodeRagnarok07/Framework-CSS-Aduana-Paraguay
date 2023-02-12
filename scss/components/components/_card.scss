@@ -1,0 +1,49 @@
+.card {
+    --card-padding:1rem;
+    padding: var(--card-padding);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+
+    .card-header {
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid v.$secondary;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        position: relative;
+
+        .menu {
+            position: absolute;
+            padding: 0.75rem;
+            // top: calc(-var(--card-padding) );
+            // right: calc(-var(--card-padding) );
+            top: -1rem;
+            right:-1rem;
+
+            cursor: pointer;
+
+            
+        }
+    }
+
+    .card-body {
+        gap: 1rem;
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: row;
+        // flex w-full items-start
+    }
+
+    .card-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.125rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid v.$secondary;
+    }
+
+
+}

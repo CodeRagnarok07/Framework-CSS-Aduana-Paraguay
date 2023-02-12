@@ -13,7 +13,9 @@ import Color from './color'
 import Placeholder from './placeholder'
 import Button from './elements/button'
 import Components from './components'
+
 import Dropdown from './dropdown'
+import Card from './card'
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
     {
         path: "/dropdown",
         element: <Layer><Dropdown /></Layer>,
+    },
+    {
+        path: "/card",
+        element: <Layer><Card /></Layer>,
     },
     {
         path: "/font",

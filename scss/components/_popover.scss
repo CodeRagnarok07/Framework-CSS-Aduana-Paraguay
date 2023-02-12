@@ -15,29 +15,28 @@ $position: (
 
 .popover {
 
-    content: "";
+    // content: "";
     position: relative;
     background-color: white;
+    // border-radius: 50%;
 
-    &::after {
+    &::before {
         --size: 1rem;
-        --dge: 45deg; // top
-        // --dge: -45deg; // left
-        // --dge: -135deg; // bottom
-        // --dge: 135deg; // left
-        // --dge: -45deg;
-        // z-index: -1;
+        --dge: -45deg; // left
+
 
         position: absolute;
         width: var(--size);
         height: var(--size);
         content: "";
-        border-top-left-radius: 2px;
-        transform: rotateX(316deg) rotate(var(--dge));
-        // margin: -0.4rem;
+        border-radius: 2px;
+        transform: rotateY(0) rotate(var(--dge));
+        // margin: -0.05rem;
         left: -5%;
         top: 10%;
         background-color: v.$white;
+
+        @extend .lt;
         // background-color: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 
         // border: 1px solid black;
@@ -52,8 +51,8 @@ $position: (
         &.bg-#{$color} {
             background-color: $value;
 
-            &::after {
-                background-color: $value
+            &::before {
+                background-color: $value;
             }
         }
 
@@ -70,7 +69,7 @@ $position: (
             &.#{$first-position-name}#{$second-position-name} {
 
 
-                &::after {
+                &::before {
 
 
                     @if($first-position-name !=$second-position-name ) {
@@ -78,34 +77,60 @@ $position: (
                         // evita top-top left-left
                         @if($first-position-name !="c") {
                             // y que  la primera posicion sea centro
-                            @include inset(auto,auto,auto,auto);
+
+                            @include inset(auto, auto, auto, auto);
                             #{$first-position}: -5%;
+
                             @if($first-position-name =="t") {
                                 --dge: 45deg;
+                                margin-#{$first-position}: -0.2rem;
+
+                                @if($second-position-name =="c") {
+                                    left: 0;
+                                    right: 0;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
                             }
-                            @if($first-position-name =="l") {
-                                --dge: -45deg;
-                            }
+
                             @if($first-position-name =="b") {
                                 --dge: 135deg;
+                                margin-#{$first-position}: -0.2rem;
+                                @if($second-position-name =="c") {
+                                    left: 0;
+                                    right: 0;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
+
                             }
+
+                            @if($first-position-name =="l") {
+                                --dge: -45deg;
+                                @if($second-position-name =="c") {
+                                    top: 0;
+                                    bottom: 0;
+                                    margin-top: auto;
+                                    margin-bottom: auto;
+                                }
+                            }
+
                             @if($first-position-name =="r") {
                                 --dge: 135deg;
+                                @if($second-position-name =="c") {
+                                    top: 0;
+                                    bottom: 0;
+                                    margin-top: auto;
+                                    margin-bottom: auto;
+                                }
                             }
 
-
-
-
-                            @if($second-position-name =="c") {
-                                top: 0rem;
-                                bottom: 0rem;
-                            }
-
-                            @else {
+                            @if($second-position-name !="c") {
                                 #{$second-position}: 10%;
                             }
                         }
-                        background-color: white;
+
+                        // background-color: white;
 
 
                     }

@@ -19,7 +19,7 @@ $value in $size-list {
     .btn-#{$size} {
         padding: $value calc($value * 2);
         border-radius: v.$radius-sm;
-        border: solid 1px;
+        // border: solid 1px;
         
         cursor: pointer;
 
@@ -27,7 +27,10 @@ $value in $size-list {
         align-items: center;    
         justify-content: center;
         gap: 10px;
+
+  
     }
+
 }
 
 
@@ -47,19 +50,20 @@ $value in $color-list {
         background-color: $value;
         border-color: $value;
 
- 
+       
         &.btn-outline {
             background-color: transparent;
             color: $value;
         }
-
-
+    
+    
         &.btn-text {
             background-color: transparent;
             border-color: transparent;
             color: $value;
+    
+    
+        }   
 
-
-        }
     }
 }

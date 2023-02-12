@@ -9,7 +9,11 @@ export default function Section({ title, text, code, type, children }) {
                 <>
                     <h3 className="h3 font-bold uppercase">{title}</h3>
                     {text &&
-                        <p>{text}</p>
+                        <pre>
+                            <p>
+                                {text}
+                            </p>
+                        </pre>
                     }
                     <div className="flex w-full gap-8">
 

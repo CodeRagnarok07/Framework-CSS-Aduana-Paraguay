@@ -1,4 +1,4 @@
-@import 'elements/elements';
+@import 'elements';
 @import 'form/form';
 @import 'app_sidebar';
 @import 'avatar';
@@ -7,5 +7,7 @@
 @import 'message';
 @import 'dropdown';
 @import 'popover';
+@import 'components';
+@import 'menu';
 
 @import 'accordion-collapsible';

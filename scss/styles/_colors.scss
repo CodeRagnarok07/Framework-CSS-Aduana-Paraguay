@@ -7,16 +7,12 @@
 
   @if abs($color-brightness) < calc($light-color / 2) {
     color: white;
-    path {
-      fill: white;
-    }
+
   }
 
   @else {
     color: black;
-    path {
-      fill: black;
-    }
+
   }
 }
 
