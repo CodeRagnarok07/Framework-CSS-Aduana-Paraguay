@@ -1946,20 +1946,67 @@ label {
 
 .menu .menu-cont {
   position: absolute;
-  position: absolute;
   margin: 0;
   min-width: max-content;
 }
 .menu .menu-cont.hidden {
   display: none;
 }
+.menu .menu-cont.hidden .dropdown {
+  max-height: 0;
+  transition: max-height 5s ease-in;
+}
 .menu .menu-cont.left {
   top: 0rem;
-  left: 1.5rem;
+  left: 110%;
 }
 .menu .menu-cont.right {
   top: 0rem;
-  right: 1.5rem;
+  right: 110%;
+}
+.menu .menu-cont.down {
+  top: 110%;
+  left: 0rem;
+}
+
+.navbar {
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid #F5F5F5;
+}
+.navbar .item-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.navbar .item-nav .bdg {
+  margin: -0.25rem 0rem;
+}
+.navbar .item-nav::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  padding-bottom: 4px;
+}
+.navbar .item-nav:hover::after {
+  border-bottom: 4px solid #C8E7EB;
+}
+.navbar .item-nav.active::after {
+  border-bottom: 4px solid #3B9AF0;
+}
+.navbar .item-nav.menu:hover {
+  background-color: #E5EEEF;
+}
+.navbar .item-nav.menu.menu-active {
+  background-color: transparent;
+  color: #054A89;
 }
 
 .accordion {
@@ -2014,6 +2061,10 @@ label {
   font-family: "Material Symbols Outlined";
   content: "\e5e1";
   order: 1;
+}
+
+* {
+  transition: all 200ms ease;
 }
 
 section {

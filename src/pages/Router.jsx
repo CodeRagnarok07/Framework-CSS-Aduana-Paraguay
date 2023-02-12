@@ -17,6 +17,10 @@ import Components from './components'
 import Dropdown from './dropdown'
 import Card from './card'
 
+import Navbar from './Navbar'
+
+
+
 
 const router = createBrowserRouter([
 
@@ -32,6 +36,10 @@ const router = createBrowserRouter([
     {
         path: "/dropdown",
         element: <Layer><Dropdown /></Layer>,
+    },
+    {
+        path: "/navbar",
+        element: <Layer><Navbar /></Layer>,
     },
     {
         path: "/card",

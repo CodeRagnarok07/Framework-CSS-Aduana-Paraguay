@@ -3,7 +3,6 @@
 
 
     const menus = document.getElementsByClassName("menu")
-    console.log("hola mundo", menus);
 
 
 
@@ -15,10 +14,17 @@
         menu_cont.classList.toggle("hidden")
         // menu_cont.classList.toggle("hidden")
 
+
+
         const handleClick = (e) => {
-            console.log("hola mundo");
-            console.log(menu_cont);
             menu_cont.classList.toggle("hidden")
+
+            const icon = menu.querySelector(".navbar-menu-icon")
+            if (icon) {
+                icon.classList.toggle("rotate-180")
+                menu.classList.toggle("menu-active")
+            }
+
 
         }
 

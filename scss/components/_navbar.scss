@@ -1,0 +1,59 @@
+.navbar {
+    
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    // border: 1px solid ;
+    border-bottom: 4px solid v.$gray-100;
+
+    .item-nav {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+
+        .bdg {
+            margin: -0.25rem 0rem;
+        }
+
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            @include inset(0, 0, -8px, 0);
+            padding-bottom: 4px;
+        }
+
+        &:hover {
+            &::after {
+      
+                border-bottom: 4px solid v.$secondary-dark;
+            }
+        }
+
+        &.active {
+            &::after {
+                border-bottom: 4px solid v.$primary-light;
+            }
+        }
+
+        &.menu{
+
+            &:hover{
+                background-color: v.$secondary;
+                
+
+            }
+
+
+            &.menu-active{
+                background-color: transparent;
+                color: v.$primary;
+
+            }
+        }
+
+
+    }
+}

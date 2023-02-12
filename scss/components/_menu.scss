@@ -2,23 +2,40 @@
 
     .menu-cont {
         position: absolute;
-        position: absolute;
         margin: 0;
 
         min-width: max-content;
+
+
+
         &.hidden {
             display: none;
+
+            .dropdown {
+                max-height: 0;
+                transition: max-height 5s ease-in;
+            }
+
+
         }
 
+  
 
-                
+
         &.left {
-            top:  0rem;
-            left: 1.5rem;
+            top: 0rem;
+            left: 110%;
         }
+
         &.right {
-            top:  0rem;
-            right: 1.5rem;
+            top: 0rem;
+            right: 110%;
+        }
+
+        &.down {
+            top: 110%;
+            left: 0rem;
+
         }
 
 
