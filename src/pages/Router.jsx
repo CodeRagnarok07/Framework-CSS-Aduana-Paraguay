@@ -13,17 +13,23 @@ import Color from './color'
 import Placeholder from './placeholder'
 import Button from './elements/button'
 import Components from './components'
+import Dropdown from './dropdown'
+
 
 const router = createBrowserRouter([
+
+
     {
         path: "/",
-        element: <Layer>
-            <Index/>
-        </Layer>,
+        element: <Layer><Index /> </Layer>,
     },
     {
         path: "/components",
         element: <Layer><Components /></Layer>,
+    },
+    {
+        path: "/dropdown",
+        element: <Layer><Dropdown /></Layer>,
     },
     {
         path: "/font",

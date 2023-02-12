@@ -1,0 +1,118 @@
+$position: (
+    "t": top,
+    "b": bottom,
+    "l": left,
+    "r": right,
+    "c": center,
+);
+
+//POPOVER
+
+
+
+
+
+
+.popover {
+
+    content: "";
+    position: relative;
+    background-color: white;
+
+    &::after {
+        --size: 1rem;
+        --dge: 45deg; // top
+        // --dge: -45deg; // left
+        // --dge: -135deg; // bottom
+        // --dge: 135deg; // left
+        // --dge: -45deg;
+        // z-index: -1;
+
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        content: "";
+        border-top-left-radius: 2px;
+        transform: rotateX(316deg) rotate(var(--dge));
+        // margin: -0.4rem;
+        left: -5%;
+        top: 10%;
+        background-color: v.$white;
+        // background-color: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+        // border: 1px solid black;
+        // box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+        // background-color: linear-gradient(to bottom, rgb(0, 0, 0), #82828200);
+
+
+    }
+
+    @each $color,
+    $value in v.$theme-colors {
+        &.bg-#{$color} {
+            background-color: $value;
+
+            &::after {
+                background-color: $value
+            }
+        }
+
+    }
+
+    ;
+
+    @each $first-position-name,
+    $first-position in $position {
+
+        @each $second-position-name,
+        $second-position in $position {
+
+            &.#{$first-position-name}#{$second-position-name} {
+
+
+                &::after {
+
+
+                    @if($first-position-name !=$second-position-name ) {
+
+                        // evita top-top left-left
+                        @if($first-position-name !="c") {
+                            // y que  la primera posicion sea centro
+                            @include inset(auto,auto,auto,auto);
+                            #{$first-position}: -5%;
+                            @if($first-position-name =="t") {
+                                --dge: 45deg;
+                            }
+                            @if($first-position-name =="l") {
+                                --dge: -45deg;
+                            }
+                            @if($first-position-name =="b") {
+                                --dge: 135deg;
+                            }
+                            @if($first-position-name =="r") {
+                                --dge: 135deg;
+                            }
+
+
+
+
+                            @if($second-position-name =="c") {
+                                top: 0rem;
+                                bottom: 0rem;
+                            }
+
+                            @else {
+                                #{$second-position}: 10%;
+                            }
+                        }
+                        background-color: white;
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}

@@ -1041,7 +1041,7 @@ small,
   gap: 10px;
 }
 
-.btn-sm, .link {
+.btn-sm, .dropdown .item, .link {
   padding: 8px 16px;
   border-radius: 0.25rem;
   border: solid 1px;
@@ -1189,6 +1189,7 @@ small,
 }
 .link .bdg {
   font-size: 12px;
+  margin: -5px 0px;
 }
 .link.link-disabled {
   pointer-events: none;
@@ -1513,7 +1514,9 @@ label {
   font-size: 1.25rem;
   color: #8d8d8d;
   left: 5%;
-  top: 40%;
+  top: 0%;
+  margin-bottom: auto;
+  margin-top: 4px;
 }
 .message .content {
   position: relative;
@@ -1544,7 +1547,435 @@ label {
 .message .content .close div:hover {
   background-color: #9f9f9f;
 }
+.message.bg-primary, .message.link.fill, .appbar ul.message {
+  color: black;
+  background-color: #c3e1fd;
+  outline: 1px solid #0657a2;
+  border-left: 8px #054A89 solid;
+}
+.message.bg-primary span.material-symbols-outlined, .message.link.fill span.material-symbols-outlined, .appbar ul.message span.material-symbols-outlined {
+  color: #0657a2;
+}
+.message.bg-primary-dark {
+  color: black;
+  background-color: #dce9f1;
+  outline: 1px solid #4a8bb7;
+  border-left: 8px #427DA6 solid;
+}
+.message.bg-primary-dark span.material-symbols-outlined {
+  color: #4a8bb7;
+}
+.message.bg-primary-light {
+  color: black;
+  background-color: white;
+  outline: 1px solid #53a6f2;
+  border-left: 8px #3B9AF0 solid;
+}
+.message.bg-primary-light span.material-symbols-outlined {
+  color: #53a6f2;
+}
+.message.bg-secondary, .appbar ul li.message:hover,
+.appbar ul li .message.selected {
+  color: black;
+  background-color: white;
+  outline: 1px solid #f5f8f9;
+  border-left: 8px #E5EEEF solid;
+}
+.message.bg-secondary span.material-symbols-outlined, .appbar ul li.message:hover span.material-symbols-outlined,
+.appbar ul li .message.selected span.material-symbols-outlined {
+  color: #f5f8f9;
+}
+.message.bg-secondary-dark {
+  color: black;
+  background-color: white;
+  outline: 1px solid #dbeff2;
+  border-left: 8px #C8E7EB solid;
+}
+.message.bg-secondary-dark span.material-symbols-outlined {
+  color: #dbeff2;
+}
+.message.bg-success {
+  color: black;
+  background-color: #d6f6f3;
+  outline: 1px solid #229287;
+  border-left: 8px #1D7D74 solid;
+}
+.message.bg-success span.material-symbols-outlined {
+  color: #229287;
+}
+.message.bg-success-dark {
+  color: black;
+  background-color: #c0e5e1;
+  outline: 1px solid #2a635d;
+  border-left: 8px #22514C solid;
+}
+.message.bg-success-dark span.material-symbols-outlined {
+  color: #2a635d;
+}
+.message.bg-warning {
+  color: black;
+  background-color: white;
+  outline: 1px solid #f08e48;
+  border-left: 8px #EE8030 solid;
+}
+.message.bg-warning span.material-symbols-outlined {
+  color: #f08e48;
+}
+.message.bg-error {
+  color: black;
+  background-color: #ffe6e6;
+  outline: 1px solid #ff1a1a;
+  border-left: 8px #FF0000 solid;
+}
+.message.bg-error span.material-symbols-outlined {
+  color: #ff1a1a;
+}
+.message.bg-error-dark {
+  color: black;
+  background-color: #fff4f4;
+  outline: 1px solid #db0000;
+  border-left: 8px #C10000 solid;
+}
+.message.bg-error-dark span.material-symbols-outlined {
+  color: #db0000;
+}
+.message.bg-muted {
+  color: black;
+  background-color: white;
+  outline: 1px solid #f6f6f6;
+  border-left: 8px #E9E9E9 solid;
+}
+.message.bg-muted span.material-symbols-outlined {
+  color: #f6f6f6;
+}
+.message.bg-white {
+  color: black;
+  background-color: white;
+  outline: 1px solid white;
+  border-left: 8px #FFFFFF solid;
+}
+.message.bg-white span.material-symbols-outlined {
+  color: white;
+}
+.message.bg-black {
+  color: black;
+  background-color: #999999;
+  outline: 1px solid #0d0d0d;
+  border-left: 8px #000000 solid;
+}
+.message.bg-black span.material-symbols-outlined {
+  color: #0d0d0d;
+}
+.message.message-center {
+  flex-direction: column;
+}
+.message.message-center span.material-symbols-outlined {
+  font-size: 2rem;
+  color: #8d8d8d;
+}
+.message.message-center .content {
+  text-align: center;
+}
+.message.message-center .content .close {
+  top: -4rem;
+  right: 0;
+  bottom: auto;
+  left: auto;
+}
 
+.dropdown {
+  padding: 8px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  height: min-content;
+}
+.dropdown .item {
+  position: relative;
+  border: none;
+  justify-content: start;
+  z-index: 1;
+}
+.dropdown .item:hover,
+.dropdown .item .selected {
+  background-color: #E9E9E9;
+  color: #054A89;
+}
+
+.popover {
+  content: "";
+  position: relative;
+  background-color: white;
+}
+.popover::after {
+  --size: 1rem;
+  --dge: 45deg;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  content: "";
+  border-top-left-radius: 2px;
+  transform: rotateX(316deg) rotate(var(--dge));
+  left: -5%;
+  top: 10%;
+  background-color: #FFFFFF;
+}
+.popover.bg-primary, .popover.link.fill, .appbar ul.popover {
+  background-color: #054A89;
+}
+.popover.bg-primary::after, .popover.link.fill::after, .appbar ul.popover::after {
+  background-color: #054A89;
+}
+.popover.bg-primary-dark {
+  background-color: #427DA6;
+}
+.popover.bg-primary-dark::after {
+  background-color: #427DA6;
+}
+.popover.bg-primary-light {
+  background-color: #3B9AF0;
+}
+.popover.bg-primary-light::after {
+  background-color: #3B9AF0;
+}
+.popover.bg-secondary, .appbar ul li.popover:hover,
+.appbar ul li .popover.selected {
+  background-color: #E5EEEF;
+}
+.popover.bg-secondary::after, .appbar ul li.popover:hover::after,
+.appbar ul li .popover.selected::after {
+  background-color: #E5EEEF;
+}
+.popover.bg-secondary-dark {
+  background-color: #C8E7EB;
+}
+.popover.bg-secondary-dark::after {
+  background-color: #C8E7EB;
+}
+.popover.bg-success {
+  background-color: #1D7D74;
+}
+.popover.bg-success::after {
+  background-color: #1D7D74;
+}
+.popover.bg-success-dark {
+  background-color: #22514C;
+}
+.popover.bg-success-dark::after {
+  background-color: #22514C;
+}
+.popover.bg-warning {
+  background-color: #EE8030;
+}
+.popover.bg-warning::after {
+  background-color: #EE8030;
+}
+.popover.bg-error {
+  background-color: #FF0000;
+}
+.popover.bg-error::after {
+  background-color: #FF0000;
+}
+.popover.bg-error-dark {
+  background-color: #C10000;
+}
+.popover.bg-error-dark::after {
+  background-color: #C10000;
+}
+.popover.bg-muted {
+  background-color: #E9E9E9;
+}
+.popover.bg-muted::after {
+  background-color: #E9E9E9;
+}
+.popover.bg-white {
+  background-color: #FFFFFF;
+}
+.popover.bg-white::after {
+  background-color: #FFFFFF;
+}
+.popover.bg-black {
+  background-color: #000000;
+}
+.popover.bg-black::after {
+  background-color: #000000;
+}
+.popover.tb::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  top: -5%;
+  --dge: 45deg;
+  bottom: 10%;
+  background-color: white;
+}
+.popover.tl::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  top: -5%;
+  --dge: 45deg;
+  left: 10%;
+  background-color: white;
+}
+.popover.tr::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  top: -5%;
+  --dge: 45deg;
+  right: 10%;
+  background-color: white;
+}
+.popover.tc::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  top: -5%;
+  --dge: 45deg;
+  top: 0rem;
+  bottom: 0rem;
+  background-color: white;
+}
+.popover.bt::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  bottom: -5%;
+  --dge: 135deg;
+  top: 10%;
+  background-color: white;
+}
+.popover.bl::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  bottom: -5%;
+  --dge: 135deg;
+  left: 10%;
+  background-color: white;
+}
+.popover.br::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  bottom: -5%;
+  --dge: 135deg;
+  right: 10%;
+  background-color: white;
+}
+.popover.bc::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  bottom: -5%;
+  --dge: 135deg;
+  top: 0rem;
+  bottom: 0rem;
+  background-color: white;
+}
+.popover.lt::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  left: -5%;
+  --dge: -45deg;
+  top: 10%;
+  background-color: white;
+}
+.popover.lb::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  left: -5%;
+  --dge: -45deg;
+  bottom: 10%;
+  background-color: white;
+}
+.popover.lr::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  left: -5%;
+  --dge: -45deg;
+  right: 10%;
+  background-color: white;
+}
+.popover.lc::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  left: -5%;
+  --dge: -45deg;
+  top: 0rem;
+  bottom: 0rem;
+  background-color: white;
+}
+.popover.rt::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  right: -5%;
+  --dge: 135deg;
+  top: 10%;
+  background-color: white;
+}
+.popover.rb::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  right: -5%;
+  --dge: 135deg;
+  bottom: 10%;
+  background-color: white;
+}
+.popover.rl::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  right: -5%;
+  --dge: 135deg;
+  left: 10%;
+  background-color: white;
+}
+.popover.rc::after {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  right: -5%;
+  --dge: 135deg;
+  top: 0rem;
+  bottom: 0rem;
+  background-color: white;
+}
+.popover.ct::after {
+  background-color: white;
+}
+.popover.cb::after {
+  background-color: white;
+}
+.popover.cl::after {
+  background-color: white;
+}
+.popover.cr::after {
+  background-color: white;
+}
 .accordion {
   padding: 1rem;
   width: 100%;

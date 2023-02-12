@@ -34,6 +34,19 @@ export default function sidebar() {
           </li>
         </a>
 
+        <a href="/dropdown">
+
+          <li className="appbar-item ">
+            <span class="material-symbols-outlined">
+              grade
+            </span>
+
+            <strong>
+              dropdown
+            </strong>
+          </li>
+        </a>
+
         <a href="/color">
 
           <li className="appbar-item ">
@@ -102,7 +115,7 @@ export default function sidebar() {
           </li>
         </a>
 
-        
+
         <a href="/placeholder">
 
           <li className="appbar-item">
