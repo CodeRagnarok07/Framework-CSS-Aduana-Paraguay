@@ -18,17 +18,20 @@ import Dropdown from './dropdown'
 import Card from './card'
 
 import Navbar from './Navbar'
+import Table from './Table'
+import Paginacion from './Paginacion'
 
 
 
 
 const router = createBrowserRouter([
 
-
     {
-        path: "/",
+        path: "/*",
         element: <Layer><Index /> </Layer>,
     },
+
+
     {
         path: "/components",
         element: <Layer><Components /></Layer>,
@@ -72,6 +75,14 @@ const router = createBrowserRouter([
     {
         path: "/collapse",
         element: <Layer><Colapse /></Layer>,
+    },
+    {
+        path: "/table",
+        element: <Layer><Table /></Layer>,
+    },
+    {
+        path: "/paginacion",
+        element: <Layer><Paginacion /></Layer>,
     },
 ]);
 

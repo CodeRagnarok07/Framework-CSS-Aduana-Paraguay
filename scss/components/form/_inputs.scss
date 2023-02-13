@@ -175,18 +175,21 @@ label {
     align-items: center;
     gap: 0.5rem;
     justify-content: space-between;
+    // width: min-content;
     
     span{
         margin: 0px;
         line-height: 0px;
-        height: min-content;
         background-color: red;
         color: v.$gray-800;
-
+        width: 24px;
     }
+
+
     input{
-        width: max-content;
+        width: 100%;
         outline: none;
+        background-color: transparent;
     }
 
 

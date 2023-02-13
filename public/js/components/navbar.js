@@ -35,7 +35,7 @@
                     const element = nav_item.querySelector(".menu-cont").classList[index];            
                     switch (element) {
                         case "down":
-                            console.log("hola mundo es down");
+                            // console.log("hola mundo es down");
                             break;
                     
                         default:

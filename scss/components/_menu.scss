@@ -1,25 +1,50 @@
+.rotate-180 {
+    transform: rotate(-180deg);
+    transition: 200ms transform ease-in-out;
+}
+
+
+.hidden {
+
+   display: none;
+
+}
+
+
+
 .menu {
+
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    // cursor: pointer;
+    position: relative;
 
     .menu-cont {
         position: absolute;
         margin: 0;
-
         min-width: max-content;
-
-
 
         &.hidden {
             display: none;
 
-            .dropdown {
+            div {
+                display: none;
+
                 max-height: 0;
-                transition: max-height 5s ease-in;
+                padding-top: 0;
+                padding-bottom: 0;
             }
-
-
         }
 
-  
+        // &.show{
+        //     div{
+        //         max-height: min-content;
+        //         transition: 200ms max-height ease-in-out;
+        //     }
+        // }
+
+
 
 
         &.left {

@@ -1,2 +1,6 @@
+
 import './components/index.js'
+(()=>{
+
+})()
 

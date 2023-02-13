@@ -1,0 +1,33 @@
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    
+
+    .pagination-item {
+        // padding: 0.125rem 0.5rem ;
+        --size: 1.5rem;
+        height: var(--size);
+        width:  var(--size);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: v.$radius-sm;
+        line-height: 0;
+        cursor: pointer;
+        
+        &:hover{
+            @extend .bg-secondary-dark;
+            
+        }
+        &.active {
+            @extend .bg-primary;
+            &:hover{
+            @extend .bg-primary;
+
+            }
+        }
+
+    }
+}

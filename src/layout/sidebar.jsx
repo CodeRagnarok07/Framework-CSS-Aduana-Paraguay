@@ -13,8 +13,9 @@ export default function sidebar() {
     { name: "inputs", icon: "grade" },
     { name: "avatar", icon: "grade" },
     { name: "placeholder", icon: "grade" },
+    { name: "table", icon: "grade" },
     { name: "collapse", icon: "grade" },
-    { name: "collapse", icon: "grade" },
+    { name: "paginacion", icon: "grade" },
 
   ]
 
@@ -28,7 +29,7 @@ export default function sidebar() {
           <a key={k} href={`/${v.name}`}>
 
             <li className="appbar-item ">
-              <span class="material-symbols-outlined">
+              <span className="material-symbols-outlined">
                 {v.icon}
               </span>
 

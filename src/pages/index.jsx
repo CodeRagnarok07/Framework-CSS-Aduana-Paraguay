@@ -7,7 +7,7 @@ export default function index() {
 
 
       <Section title={"Badge"} type={true}
-        code={`<div className="btn-sm btn-primary">
+code={`<div className="btn-sm btn-primary">
   element
   <div className="bdg bg-white">48</div>
 </div>`}>

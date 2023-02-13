@@ -830,7 +830,7 @@ small,
 }
 
 /*************** THEME COLORS ***************/
-.bg-primary, .appbar ul, .link.fill {
+.bg-primary, .pagination .pagination-item.active:hover, .pagination .pagination-item.active, .appbar ul, .link.fill {
   color: white;
   background-color: #054A89;
 }
@@ -851,7 +851,7 @@ small,
   background-color: #E5EEEF;
 }
 
-.bg-secondary-dark {
+.bg-secondary-dark, .pagination .pagination-item:hover {
   color: black;
   background-color: #C8E7EB;
 }
@@ -1285,13 +1285,14 @@ label {
 .input span {
   margin: 0px;
   line-height: 0px;
-  height: min-content;
   background-color: red;
   color: #808080;
+  width: 24px;
 }
 .input input {
-  width: max-content;
+  width: 100%;
   outline: none;
+  background-color: transparent;
 }
 
 .form-group {
@@ -1491,13 +1492,13 @@ label {
 .message .content .close div:hover {
   background-color: #9f9f9f;
 }
-.message.bg-primary, .message.link.fill, .appbar ul.message {
+.message.bg-primary, .pagination .message.pagination-item.active, .message.link.fill, .appbar ul.message {
   color: black;
   background-color: #c3e1fd;
   outline: 1px solid #0657a2;
   border-left: 8px #054A89 solid;
 }
-.message.bg-primary span.material-symbols-outlined, .message.link.fill span.material-symbols-outlined, .appbar ul.message span.material-symbols-outlined {
+.message.bg-primary span.material-symbols-outlined, .pagination .message.pagination-item.active span.material-symbols-outlined, .message.link.fill span.material-symbols-outlined, .appbar ul.message span.material-symbols-outlined {
   color: #0657a2;
 }
 .message.bg-primary-dark {
@@ -1529,13 +1530,13 @@ label {
 .appbar ul li .message.selected span.material-symbols-outlined {
   color: #f5f8f9;
 }
-.message.bg-secondary-dark {
+.message.bg-secondary-dark, .pagination .message.pagination-item:hover {
   color: black;
   background-color: white;
   outline: 1px solid #dbeff2;
   border-left: 8px #C8E7EB solid;
 }
-.message.bg-secondary-dark span.material-symbols-outlined {
+.message.bg-secondary-dark span.material-symbols-outlined, .pagination .message.pagination-item:hover span.material-symbols-outlined {
   color: #dbeff2;
 }
 .message.bg-success {
@@ -1663,10 +1664,10 @@ label {
   top: 10%;
   background-color: #FFFFFF;
 }
-.popover.bg-primary, .popover.link.fill, .appbar ul.popover {
+.popover.bg-primary, .pagination .popover.pagination-item.active, .popover.link.fill, .appbar ul.popover {
   background-color: #054A89;
 }
-.popover.bg-primary::before, .popover.link.fill::before, .appbar ul.popover::before {
+.popover.bg-primary::before, .pagination .popover.pagination-item.active::before, .popover.link.fill::before, .appbar ul.popover::before {
   background-color: #054A89;
 }
 .popover.bg-primary-dark {
@@ -1689,10 +1690,10 @@ label {
 .appbar ul li .popover.selected::before {
   background-color: #E5EEEF;
 }
-.popover.bg-secondary-dark {
+.popover.bg-secondary-dark, .pagination .popover.pagination-item:hover {
   background-color: #C8E7EB;
 }
-.popover.bg-secondary-dark::before {
+.popover.bg-secondary-dark::before, .pagination .popover.pagination-item:hover::before {
   background-color: #C8E7EB;
 }
 .popover.bg-success {
@@ -1944,6 +1945,95 @@ label {
   border-top: 1px solid #E5EEEF;
 }
 
+.table {
+  transition: none;
+  font-weight: 400;
+  width: 100%;
+  background: #FAFAFA;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+.table .table-head-options {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 1.125rem;
+  padding: 1rem;
+}
+.table .table-head-options span {
+  color: #808080;
+}
+.table .table-head-options .table-head-dropmenu {
+  border-radius: 0.25rem;
+  border: 2px #C4C4C4 solid;
+  display: flex;
+}
+.table .table-head-options .table-head-dropmenu .dropmenu-name {
+  padding: 0.5rem;
+  background-color: #C4C4C4;
+  color: #808080;
+}
+.table .table-head-options .table-head-dropmenu .dropmenu-selected {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.table .table-head-options .last {
+  margin-left: auto;
+}
+.table table {
+  width: 100%;
+}
+.table table th,
+.table table td {
+  font-weight: 400;
+  padding: 1.25rem 1rem;
+}
+.table table tr {
+  display: table-row;
+  border-bottom: 1px solid #E9E9E9;
+}
+.table table thead .table-head {
+  background-color: #D0D0D0;
+}
+.table table thead .table-head th div {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+.table table thead .table-head th div span {
+  color: #808080;
+  cursor: pointer;
+}
+.table table tbody tr:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+.table table tbody tr:hover {
+  cursor: pointer;
+  background-color: #E9E9E9;
+}
+.table .pagination-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.75rem 0 1rem 0;
+}
+
+.rotate-180 {
+  transform: rotate(-180deg);
+  transition: 200ms transform ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
 .menu .menu-cont {
   position: absolute;
   margin: 0;
@@ -1952,9 +2042,11 @@ label {
 .menu .menu-cont.hidden {
   display: none;
 }
-.menu .menu-cont.hidden .dropdown {
+.menu .menu-cont.hidden div {
+  display: none;
   max-height: 0;
-  transition: max-height 5s ease-in;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .menu .menu-cont.left {
   top: 0rem;
@@ -2009,6 +2101,22 @@ label {
   color: #054A89;
 }
 
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.pagination .pagination-item {
+  --size: 1.5rem;
+  height: var(--size);
+  width: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  line-height: 0;
+  cursor: pointer;
+}
 .accordion {
   padding: 1rem;
   width: 100%;
