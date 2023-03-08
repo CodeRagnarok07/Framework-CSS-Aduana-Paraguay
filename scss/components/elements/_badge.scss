@@ -1,23 +1,28 @@
+$position: (
+    "t": top,
+    "b": bottom,
+    "l": left,
+    "r": right,
+);
 
-
-.bdg{
+.bdg {
     padding: 4px 8px;
     border-radius: v.$radius-sm;
 
+    @each $position-name,
+    $position in $position {
 
+        &.inset-#{$position-name}{
+            $position: 0
 
-    &.tl{
-        @include inset(0,0);
-    }
-
-    &.tr{
-        @include inset(0,auto,auto,0);
-
-    }
-
-    &.t{
-        @include inset(0,0,0);
+        }
 
     }
+
+
+
+
+
+
 
 }

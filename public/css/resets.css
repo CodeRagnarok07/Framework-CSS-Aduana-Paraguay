@@ -571,18 +571,6 @@ video {
   position: relative;
 }
 
-.-top-2 {
-  top: -0.5rem;
-}
-
-.-left-2 {
-  left: -0.5rem;
-}
-
-.-right-2 {
-  right: -0.5rem;
-}
-
 .-top-4 {
   top: -1rem;
 }
@@ -628,8 +616,8 @@ video {
   display: grid;
 }
 
-.h-full {
-  height: 100%;
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-full {

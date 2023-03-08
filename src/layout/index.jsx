@@ -9,7 +9,7 @@ export default function MyApp({ children }) {
         <React.Fragment>
             <Navbar />
 
-            <main className='flex h-full' >
+            <main className='flex min-h-full' >
                 <Sidebar />
                 <div className='w-full m-8'>
 

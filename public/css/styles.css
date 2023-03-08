@@ -1143,25 +1143,6 @@ small,
   padding: 4px 8px;
   border-radius: 0.25rem;
 }
-.bdg.tl {
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: auto;
-}
-.bdg.tr {
-  top: 0;
-  right: auto;
-  bottom: auto;
-  left: 0;
-}
-.bdg.t {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: auto;
-}
-
 .input-group {
   display: flex;
   gap: 0.5rem;
@@ -1300,40 +1281,6 @@ label {
   gap: 10px;
 }
 
-.appbar {
-  display: flex;
-  min-height: 100%;
-}
-.appbar ul {
-  width: max-content;
-  height: 100%;
-}
-.appbar ul li {
-  padding: 1rem 1.5rem;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-.appbar ul li:hover,
-.appbar ul li .selected {
-  cursor: pointer;
-  box-shadow: 4px 0px 0px 0px rgb(57, 73, 171) inset;
-}
-.appbar ul li.appbar-title {
-  border-bottom: 1px #427DA6 solid;
-  border-top: 1px #427DA6 solid;
-  color: #3B9AF0;
-}
-.appbar ul li.appbar-item .subitem-title {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-.appbar ul li.appbar-item.active {
-  background-color: #FFFFFF;
-  color: #054A89;
-}
-
 .avatar {
   width: 5rem;
   height: 5rem;
@@ -1353,49 +1300,6 @@ label {
 .avatar.avatar-lg {
   width: 7.5rem;
   height: 7.5rem;
-}
-
-.skeleton {
-  display: flex;
-  flex-direction: column;
-  min-width: max-content;
-  width: 100%;
-  color: #808080;
-  text-align: center;
-}
-.skeleton .skeleton-content, .skeleton .skeleton-header, .skeleton .skeleton-card {
-  width: 100%;
-  background-color: #E9E9E9;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0px;
-  display: grid;
-  place-content: center;
-}
-.skeleton .skeleton-header {
-  height: 2.25rem;
-}
-.skeleton .skeleton-avatar {
-  min-width: 7.5rem;
-  min-height: 7.5rem;
-  background-color: #E9E9E9;
-  border-radius: 100%;
-  margin: 1rem;
-  display: grid;
-  place-content: center;
-}
-.skeleton .skeleton-content {
-  height: 1.25rem;
-}
-.skeleton .skeleton-card {
-  height: 6.25rem;
-  display: flex;
-  display: grid;
-  place-content: center;
-}
-.skeleton .skeleton-card-group {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
 }
 
 @keyframes spin {
@@ -1492,13 +1396,13 @@ label {
 .message .content .close div:hover {
   background-color: #9f9f9f;
 }
-.message.bg-primary, .pagination .message.pagination-item.active, .message.link.fill, .appbar ul.message {
+.message.bg-primary, .pagination .message.pagination-item.active, .appbar ul.message, .message.link.fill {
   color: black;
   background-color: #c3e1fd;
   outline: 1px solid #0657a2;
   border-left: 8px #054A89 solid;
 }
-.message.bg-primary span.material-symbols-outlined, .pagination .message.pagination-item.active span.material-symbols-outlined, .message.link.fill span.material-symbols-outlined, .appbar ul.message span.material-symbols-outlined {
+.message.bg-primary span.material-symbols-outlined, .pagination .message.pagination-item.active span.material-symbols-outlined, .appbar ul.message span.material-symbols-outlined, .message.link.fill span.material-symbols-outlined {
   color: #0657a2;
 }
 .message.bg-primary-dark {
@@ -1664,10 +1568,10 @@ label {
   top: 10%;
   background-color: #FFFFFF;
 }
-.popover.bg-primary, .pagination .popover.pagination-item.active, .popover.link.fill, .appbar ul.popover {
+.popover.bg-primary, .pagination .popover.pagination-item.active, .appbar ul.popover, .popover.link.fill {
   background-color: #054A89;
 }
-.popover.bg-primary::before, .pagination .popover.pagination-item.active::before, .popover.link.fill::before, .appbar ul.popover::before {
+.popover.bg-primary::before, .pagination .popover.pagination-item.active::before, .appbar ul.popover::before, .popover.link.fill::before {
   background-color: #054A89;
 }
 .popover.bg-primary-dark {
@@ -2019,46 +1923,81 @@ label {
   padding: 1.75rem 0 1rem 0;
 }
 
-.rotate-180 {
-  transform: rotate(-180deg);
-  transition: 200ms transform ease-in-out;
-}
-
-.hidden {
-  display: none;
-}
-
-.menu {
+.appbar {
   display: flex;
-  gap: 0.5rem;
+  min-height: 100%;
+}
+.appbar ul {
+  width: max-content;
+  height: 100%;
+}
+.appbar ul li {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 20px;
   align-items: center;
-  position: relative;
 }
-.menu .menu-cont {
-  position: absolute;
-  margin: 0;
+.appbar ul li:hover,
+.appbar ul li .selected {
+  cursor: pointer;
+  box-shadow: 4px 0px 0px 0px rgb(57, 73, 171) inset;
+}
+.appbar ul li.appbar-title {
+  border-bottom: 1px #427DA6 solid;
+  border-top: 1px #427DA6 solid;
+  color: #3B9AF0;
+}
+.appbar ul li.appbar-item .subitem-title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.appbar ul li.appbar-item.active {
+  background-color: #FFFFFF;
+  color: #054A89;
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
   min-width: max-content;
+  width: 100%;
+  color: #808080;
+  text-align: center;
 }
-.menu .menu-cont.hidden {
-  display: none;
+.skeleton .skeleton-content, .skeleton .skeleton-header, .skeleton .skeleton-card {
+  width: 100%;
+  background-color: #E9E9E9;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0px;
+  display: grid;
+  place-content: center;
 }
-.menu .menu-cont.hidden div {
-  display: none;
-  max-height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+.skeleton .skeleton-header {
+  height: 2.25rem;
 }
-.menu .menu-cont.left {
-  top: 0rem;
-  left: 110%;
+.skeleton .skeleton-avatar {
+  min-width: 7.5rem;
+  min-height: 7.5rem;
+  background-color: #E9E9E9;
+  border-radius: 100%;
+  margin: 1rem;
+  display: grid;
+  place-content: center;
 }
-.menu .menu-cont.right {
-  top: 0rem;
-  right: 110%;
+.skeleton .skeleton-content {
+  height: 1.25rem;
 }
-.menu .menu-cont.down {
-  top: 110%;
-  left: 0rem;
+.skeleton .skeleton-card {
+  height: 6.25rem;
+  display: flex;
+  display: grid;
+  place-content: center;
+}
+.skeleton .skeleton-card-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .navbar {
@@ -2117,6 +2056,48 @@ label {
   line-height: 0;
   cursor: pointer;
 }
+.rotate-180 {
+  transform: rotate(-180deg);
+  transition: 200ms transform ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+.menu .menu-cont {
+  position: absolute;
+  margin: 0;
+  min-width: max-content;
+}
+.menu .menu-cont.hidden {
+  display: none;
+}
+.menu .menu-cont.hidden div {
+  display: none;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.menu .menu-cont.left {
+  top: 0rem;
+  left: 110%;
+}
+.menu .menu-cont.right {
+  top: 0rem;
+  right: 110%;
+}
+.menu .menu-cont.down {
+  top: 110%;
+  left: 0rem;
+}
+
 .accordion {
   padding: 1rem;
   width: 100%;
